@@ -176,3 +176,120 @@ body {
   font-weight: 400;
   color: #171717;
 }
+
+.product-recommendations {
+  padding-top: 3rem;
+}
+
+.product-recommendations-title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  padding-bottom: .5rem;
+  font-family: Raleway, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #171717;
+  border-bottom: 1px solid #171717;
+}
+
+.product-recommendations-cards-row-1 {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.product-recommendations-cards-row-2 {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.product-recommendations-card {
+  padding: 0 1rem;
+}
+
+.product-recommendations-card-photo {
+  width: 130px;
+  height: 174px;
+}
+
+.product-recommendations-card-name {
+  margin-bottom: .5rem;
+  font-family: Lora, serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #171717;
+}
+
+.product-recommendations-card-price {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #999999;
+}
+
+.product-more {
+  padding-left: 1rem;
+}
+
+.product-more-title {
+  display: inline-block;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #111111;
+  font-family: Lora, serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #171717;
+}
+
+.product-more-link {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: Lora, serif;
+  font-style: italic;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #171717;
+}
+
+.footer {
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  background-color: #f3f3f3;
+}
+
+.button-footer {
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: #999999;
+  font-family: Raleway, serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.footer-title-help {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #171717;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footer-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: Lora, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #171717;
+}
