@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-flow: row;
   overflow-x: scroll;
+  flex-shrink: 0;
 }
 
 .product-image {
