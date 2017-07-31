@@ -5,15 +5,15 @@
     <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-complex.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:400,500,700" rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="header">
       <img class="header-logo" src="img/logo.svg"></img>
     </header>
-    <main>
+    <main class="main">
       <div class="product-name">
         <h1 class="product-name-title">
           Long Cotton Gabardine Car Coat
@@ -22,9 +22,11 @@
       <div class="product-images">
         <img class="product-image" src="img/product-photo-1.png"/>
         <img class="product-image" src="img/product-photo-2.png"/>
+        <img class="product-image" src="img/product-photo-3.png"/>
+        <img class="product-image" src="img/product-photo-4.png"/>
       </div>
       <div class="product-description">
-        <div class="row">
+        <div class="product-description-wrapper">
           <h2 class="product-description-price">
             110 000 руб
           </h2>
@@ -33,10 +35,14 @@
           </p>
         </div>
         <p class="product-description-colour">Colour: Honey</p>
-        <button class="button-product-description-colour button-black"></button>
-        <button class="button-product-description-colour button-brown"></button>
-        <button class="button-product-description-size">SELECT A SIZE</button>
-        <button class="button-product-description-store">FIND IN STORE</button>
+        <div class="product-description-color-button-wrapper">
+          <button class="button-product-description-colour button-bg-black"></button>
+          <button class="button-product-description-colour button-product-description-colour-active button-bg-brown"></button>
+        </div>
+        <div class="button-product-description-cta-wrapper">
+          <button class="button-product-description-size">SELECT A SIZE</button>
+          <button class="button-product-description-store">FIND IN STORE</button>
+        </div>
         <button class="button-product-description-help">NEED SIZE HELP?</button>
       </div>
       <div class="product-info">
