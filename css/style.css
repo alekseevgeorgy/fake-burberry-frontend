@@ -215,7 +215,7 @@ body {
 }
 
 .product-recommendations-card {
-  max-width: 8.125rem;
+  flex-basis: 8.125rem;
   margin-bottom: 2rem;
 }
 
