@@ -11,13 +11,10 @@ body {
   border-bottom: 1px solid #c6c6c6;
 }
 
-.product-name {
+.product-name-heading {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
-}
-
-.product-name-heading {
   margin: 0;
   font-family: Lora, serif;
   font-size: 1.25rem;
@@ -62,10 +59,10 @@ body {
 .product-info-article {
   display: inline-block;
   margin: 0;
-  font-family: Raleway, sans-serif;
   font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: Raleway, sans-serif;
   font-weight: 300;
-  line-height: 0.875rem;
   color: #171717;
 }
 
@@ -181,13 +178,15 @@ body {
   padding-bottom: 2rem;
 }
 
-.product-description-text {
+.product-description-text-wrapper p, ul, li {
   margin: 0;
+  padding: 0;
   font-family: Lora, serif;
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 400;
   color: #171717;
+  list-style: none;
 }
 
 .product-description-text-break {
