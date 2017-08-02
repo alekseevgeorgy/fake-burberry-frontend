@@ -8,7 +8,7 @@ body {
   justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  box-shadow: inset 0 -1px 0 0px #c6c6c6;
+  border: 1px solid #c6c6c6;
 }
 
 .product-name {
@@ -17,7 +17,7 @@ body {
   padding-left: 1rem;
 }
 
-.product-name-title {
+.product-name-heading {
   margin: 0;
   font-family: Lora, serif;
   font-size: 1.25rem;
@@ -38,18 +38,18 @@ body {
   height: 400px;
 }
 
-.product-description {
+.product-info {
   padding: 1rem 1rem 3rem 1rem;
 }
 
-.product-description-wrapper {
+.product-info-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.product-description-price {
+.product-info-price {
   display: inline-block;
   margin: 0;
   font-size: 1rem;
@@ -59,7 +59,7 @@ body {
   color: #111111;
 }
 
-.product-description-article {
+.product-info-article {
   display: inline-block;
   margin: 0;
   font-family: Raleway, sans-serif;
@@ -69,7 +69,7 @@ body {
   color: #171717;
 }
 
-.product-description-colour {
+.product-info-colour {
   margin: 0;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
@@ -78,14 +78,14 @@ body {
   color: #171717;
 }
 
-.product-description-color-button-wrapper {
+.product-info-colour-button-wrapper {
   display: flex;
   border-bottom: 1px solid #c6c6c6;
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
-.button-product-description-colour {
+.product-info-colour-button-select {
   display: inline-block;
   padding: 20px;
   border-radius: 50%;
@@ -93,7 +93,7 @@ body {
   margin-right: 1rem;
 }
 
-.button-product-description-colour-active {
+.product-info-colour-button-select-active {
   box-shadow: inset 0 0 0 1px #232122;
 }
 
@@ -105,17 +105,18 @@ body {
   background-color: #cfa880;
 }
 
-.button-product-description-cta-wrapper {
+.product-info-cta-button-wrapper {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
 }
 
-.button-product-description-size {
+.product-info-cta-button-size {
   padding: 16px 0;
   background-color: #171717;
-  border: none;
+  /*border: none;*/
   border-radius: 2px;
+  border: solid 1px #171717;
   margin-bottom: 1rem;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
@@ -124,12 +125,13 @@ body {
   color: #fff;
 }
 
-.button-product-description-store {
+.product-info-cta-button-store {
   padding: 16px 0;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: inset 0 0 0 1px #999999;
-  border: none;
+  border: 1px solid #999999;
+  /*box-shadow: inset 0 0 0 1px #999999;*/
+  /*border: none;*/
   margin-bottom: 1.5rem;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
@@ -138,7 +140,7 @@ body {
   color: #171717;
 }
 
-.button-product-description-help {
+.product-info-button-help {
   display: block;
   margin: 0;
   padding: 0;
@@ -151,12 +153,12 @@ body {
   color: #171717;
 }
 
-.product-info {
+.product-description {
   border-bottom: 1px solid #c6c6c6;
   margin: 0;
 }
 
-.product-info-title {
+.product-description-heading {
   margin: 0;
   font-family: Raleway, sans-serif;
   font-size: 1rem;
@@ -165,20 +167,20 @@ body {
   color: #171717;
 }
 
-.product-info-title-wrapper {
+.product-description-heading-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 2rem 1rem;
   border-top: 1px solid #c6c6c6;
 }
 
-.product-info-text-wrapper {
+.product-description-text-wrapper {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
 }
 
-.product-info-text {
+.product-description-text {
   margin: 0;
   font-family: Lora, serif;
   font-size: 0.875rem;
@@ -187,7 +189,7 @@ body {
   color: #171717;
 }
 
-.product-info-text-break {
+.product-description-text-break {
   line-height: 1.5rem;
 }
 
@@ -195,7 +197,7 @@ body {
   padding: 3rem 1rem 0 1rem;
 }
 
-.product-recommendations-title {
+.product-recommendations-heading {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -249,7 +251,7 @@ body {
   margin-top: 1rem;
 }
 
-.product-more-title {
+.product-more-heading {
   display: inline-block;
   padding-bottom: .5rem;
   margin-bottom: 1.5rem;
@@ -280,7 +282,7 @@ body {
   background-color: #f3f3f3;
 }
 
-.button-footer {
+.footer-button {
   display: block;
   margin-bottom: 1rem;
   border: none;
@@ -293,7 +295,7 @@ body {
   color: #999999;
 }
 
-.footer-title-help {
+.footer-heading-help {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   color: #171717;
