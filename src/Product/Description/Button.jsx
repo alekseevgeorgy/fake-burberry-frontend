@@ -16,15 +16,17 @@ const WrapperButton = styled.div`
   align-items: center;
   padding: 2rem .5rem;
 
+  &:after {
+    content: url(${triangle});
+  }
+
   @media screen and (min-width: 768px) {
     border-top: 0;
     padding: 1.5rem 0 1rem 0;
-  }
-`;
 
-const Triangle = styled.img`
-  @media screen and (min-width: 768px) {
-    display: none;
+    &:after {
+      content: none;
+    }
   }
 `;
 
@@ -41,6 +43,5 @@ export default () =>
   <Button>
     <WrapperButton>
       <Heading>DESCRIPTION</Heading>
-      <Triangle src={triangle} />
     </WrapperButton>
   </Button>;

@@ -37,19 +37,19 @@ export default () => {
     <Images>
       <Image
         src={process.env.PUBLIC_URL + "img/product-photo-1.png"}
-        alt={"product-photo-1"}
+        alt="product-photo-1"
       />
       <Image
         src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
-        alt={"product-photo-2"}
+        alt="product-photo-2"
       />
       <Image
         src={process.env.PUBLIC_URL + "img/product-photo-3.png"}
-        alt={"product-photo-3"}
+        alt="product-photo-3"
       />
       <Image
         src={process.env.PUBLIC_URL + "img/product-photo-4.png"}
-        alt={"product-photo-4"}
+        alt="product-photo-4"
       />
     </Images>
   );

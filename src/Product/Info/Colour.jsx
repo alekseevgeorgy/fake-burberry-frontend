@@ -23,7 +23,7 @@ const Button = styled.button`
   border-radius: 50%;
   border: none;
   margin-right: 1rem;
-  background-color: ${props => props.bg};
+  background-color: ${props => props.colour};
   box-shadow: ${props =>
     props.selected ? "inset 0 0 0 1px #232122;" : "none"};
 `;
@@ -32,7 +32,7 @@ export default () =>
   <div>
     <Colour>Colour: Honey</Colour>
     <Wrapper>
-      <Button bg="#232122" />
-      <Button bg="#cfa880" selected />
+      <Button colour="#232122" />
+      <Button colour="#cfa880" selected />
     </Wrapper>
   </div>;
