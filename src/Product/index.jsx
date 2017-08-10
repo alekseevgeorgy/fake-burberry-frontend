@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import Info from "./Info";
 import Description from "./Description";
 import Shipping from "./Shipping";
@@ -23,9 +24,12 @@ const Line = styled.hr`
   }
 `;
 
-export default props => {
+export default () => {
   return (
     <main className="container">
+      <Helmet>
+        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+      </Helmet>
       <Info />
       <Line />
       <Description />

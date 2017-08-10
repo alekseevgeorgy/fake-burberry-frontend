@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Name from "./Name";
 import Images from "./Images";
 import Price from "./Price";
