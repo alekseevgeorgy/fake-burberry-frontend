@@ -13,10 +13,19 @@ const Header = styled.header`
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+
+  @media screen and (min-width: 992px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 `;
 
 const Logo = styled.img`
   display: block;
+
+  @media screen and (min-width: 992px) {
+    height: 16px;
+  }
 `;
 
 export default () =>

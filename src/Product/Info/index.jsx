@@ -31,7 +31,7 @@ export default () =>
         <Images />
       </div>
       <div className="col-xs-12 col-md-5">
-        <Price price={110000} currency="RUB" article={39428531} />
+        <Price price={110000} currency="RUB" id={39428531} />
         <Colour />
         <Cta />
       </div>

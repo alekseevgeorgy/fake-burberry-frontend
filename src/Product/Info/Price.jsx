@@ -24,7 +24,7 @@ const Price = styled.h2`
   color: #111111;
 `;
 
-const Article = styled.p`
+const Id = styled.p`
   display: inline-block;
   margin: 0;
   font-size: 0.75rem;
@@ -45,7 +45,7 @@ export default props =>
         minimumFractionDigits="0"
       />
     </Price>
-    <Article>
-      Item {props.article}
-    </Article>
+    <Id>
+      Item {props.id}
+    </Id>
   </Wrapper>;
