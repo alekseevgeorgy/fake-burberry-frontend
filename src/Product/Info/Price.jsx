@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
 
 const Wrapper = styled.div`
   display: flex;
@@ -7,6 +8,10 @@ const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 1rem;
   margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 const Price = styled.h2`
@@ -29,8 +34,18 @@ const Article = styled.p`
   color: #171717;
 `;
 
-export default () =>
+export default props =>
   <Wrapper>
-    <Price>110 000 руб.</Price>
-    <Article>Item 39428531</Article>
+    <Price>
+      <FormattedNumber
+        value={props.price}
+        style="currency"
+        currency={props.currency}
+        currencyDisplay="code"
+        minimumFractionDigits="0"
+      />
+    </Price>
+    <Article>
+      Item {props.article}
+    </Article>
   </Wrapper>;

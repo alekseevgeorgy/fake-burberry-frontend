@@ -57,7 +57,7 @@ const WrapperText = styled.div`
   }
 `;
 
-const TextBold = styled.p`
+const Title = styled.p`
   margin: 0;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
@@ -65,7 +65,7 @@ const TextBold = styled.p`
   font-weight: 700;
 `;
 
-const Text = TextBold.extend`
+const Text = Title.extend`
   margin-top: 0.25rem;
   margin-bottom: 1.5rem;
   font-size: 0.75rem;
@@ -89,18 +89,18 @@ export default () =>
         </WrapperButton>
       </Button>
       <WrapperText>
-        <TextBold>Free Next Day Delivery</TextBold>
+        <Title>Free Next Day Delivery</Title>
         <Text>
           Order before 7pm Monday to Thursday for delivery the next day
         </Text>
-        <TextBold>Collect-in-Store</TextBold>
+        <Title>Collect-in-Store</Title>
         <Text>
           Order online today and pick up your items in store as early as
           tomorrow
         </Text>
-        <TextBold>Free Returns</TextBold>
+        <Title>Free Returns</Title>
         <Text>Enjoy free returns on your order</Text>
-        <TextBold>Free Gift Packaging</TextBold>
+        <Title>Free Gift Packaging</Title>
         <Text>
           Discover our gift packaging, a gold lined box tied with a coloured
           ribbon

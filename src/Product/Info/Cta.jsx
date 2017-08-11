@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
 const Button = styled.button`
   padding: 1rem 0;
-  background-color: ${props => props.bg};
+  background-color: ${props => props.colour};
   border-radius: 2px;
   border: solid 1px #171717;
   margin-bottom: 1rem;
@@ -17,12 +17,12 @@ const Button = styled.button`
   font-size: 0.75rem;
   line-height: 0.875rem;
   font-weight: 400;
-  color: ${props => props.color};
+  color: ${props => props.textColour};
 `;
 
 const ButtonHelp = styled.button`
   display: block;
-  margin-top: 0;
+  margin-top: .5rem;
   margin-bottom: 3rem;
   padding: 0;
   border: none;
@@ -37,8 +37,12 @@ const ButtonHelp = styled.button`
 export default () =>
   <div>
     <Wrapper>
-      <Button bg="#171717" color="#fff">SELECT A SIZE</Button>
-      <Button bg="#fff" color="#171717">FIND IN STORE</Button>
+      <Button colour="#171717" textColour="#fff">
+        SELECT A SIZE
+      </Button>
+      <Button colour="#fff" textColour="#171717">
+        FIND IN STORE
+      </Button>
     </Wrapper>
     <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
   </div>;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FormattedNumber } from "react-intl";
 
 const Card = styled.a`
   display: block;
@@ -41,6 +42,12 @@ export default props =>
       {props.name}
     </Name>
     <Price>
-      {props.price}
+      <FormattedNumber
+        value={props.price}
+        style="currency"
+        currency={props.currency}
+        currencyDisplay="code"
+        minimumFractionDigits="0"
+      />
     </Price>
   </Card>;
