@@ -5,8 +5,7 @@ import "normalize.css";
 import "flexboxgrid2";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
-import { IntlProvider } from "react-intl";
-import { addLocaleData } from "react-intl";
+import { IntlProvider, addLocaleData } from "react-intl";
 import ruLocaleData from "react-intl/locale-data/ru";
 
 addLocaleData(ruLocaleData);
