@@ -22,9 +22,11 @@ const Button = styled.button`
     `
     background-color: #171717;
     color: #fff;
-  `} ${props =>
-      props.secondary &&
-      `
+  `};
+
+  ${props =>
+    props.secondary &&
+    `
     background-color: #fff;
     color: #171717;
   `};
