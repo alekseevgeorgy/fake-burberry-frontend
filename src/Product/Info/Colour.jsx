@@ -10,11 +10,11 @@ const Colour = styled.p`
   line-height: 1rem;
   color: #171717;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding-left: .5rem;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     padding-left: 0;
   }
 `;

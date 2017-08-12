@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
-import Responsive from "react-responsive";
-
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
 const Card = styled.a`
   display: block;
   margin-bottom: 2rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     margin-bottom: 4rem;
   }
 `;
@@ -28,7 +26,7 @@ const Name = styled.h3`
   font-weight: 400;
   color: #171717;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     margin-top: 1rem;
     font-family: Raleway;
     font-size: 12px;
@@ -45,7 +43,7 @@ const Price = styled.h5`
   font-weight: 400;
   color: #999999;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     position: relative;
     top: 4rem;
     margin-bottom: -1rem;

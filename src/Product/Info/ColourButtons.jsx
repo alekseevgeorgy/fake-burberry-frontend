@@ -8,11 +8,11 @@ const Wrapper = styled.div`
   padding-bottom: 2rem;
   margin: 0 .5rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     margin: 0;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     border-bottom: none;
     padding-bottom: 1.5rem;
   }

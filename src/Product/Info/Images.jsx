@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Responsive from "react-responsive";
-
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
 const Image = styled.img`
   height: 400px;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     height: 576px;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     height: 651px;
   }
 `;
@@ -29,7 +27,7 @@ const Images = styled.div`
   margin-left: -50vw;
   margin-right: -50vw;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     width: inherit;
     position: inherit;
     left: inherit;

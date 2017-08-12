@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Navigation = styled.nav`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: block;
     margin-bottom: 2rem;
   }

@@ -5,7 +5,7 @@ const Wrapper = styled.section`
   padding-left: .5rem;
   margin-top: 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: none;
   }
 `;

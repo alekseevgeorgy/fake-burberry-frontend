@@ -13,7 +13,7 @@ const Line = styled.hr`
   border: none;
   background-color: #c6c6c6;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: none;
   }
 `;

@@ -20,7 +20,7 @@ const WrapperButton = styled.div`
     content: url(${triangle});
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     border-top: 0;
     padding: 1.5rem 0 1rem 0;
 
@@ -29,7 +29,7 @@ const WrapperButton = styled.div`
     }
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     padding: 4rem 0 1rem 0;
 
 `;

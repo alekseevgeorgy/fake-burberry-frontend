@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Responsive from "react-responsive";
-
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,7 +8,7 @@ const Wrapper = styled.div`
   margin-top: 2rem;
   padding: 0 .5rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding: 0;
   }
 `;
@@ -54,7 +52,7 @@ const ButtonHelp = styled.button`
   font-weight: 400;
   color: #171717;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding: 0;
   }
 `;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Content = styled.div`
   padding: 0 1rem 2rem 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding: 0 0 1.5rem;
   }
 

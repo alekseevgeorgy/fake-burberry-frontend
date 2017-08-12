@@ -5,7 +5,7 @@ import triangle from "../img/triangle-up.svg";
 const Picture = styled.img`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: block;
     width: 100%;
   }
@@ -25,7 +25,7 @@ const WrapperButton = styled.div`
   align-items: center;
   padding: 2rem 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     border-top: 0;
     padding: 0;
   }
@@ -43,7 +43,7 @@ const Heading = styled.h2`
 const Triangle = styled.img`
   transform: rotate(180deg);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: none;
   }
 `;
@@ -51,7 +51,7 @@ const Triangle = styled.img`
 const WrapperText = styled.div`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: block;
     padding-top: 1rem;
   }

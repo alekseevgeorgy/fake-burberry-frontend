@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Description from "./Description";
-import Responsive from "react-responsive";
-
-var MediaQuery = require("react-responsive");
+import MediaQuery from "react-responsive";
 
 const ImagePrimary = styled.img`
   display: block;
@@ -19,14 +17,15 @@ const ImageSecondary = styled.img`
   flex-shrink: 0;
 `;
 
-const Wrapper = styled.div`
+const Images = styled.div`
+  margin-bottom: 4rem;
+
   div:nth-child(1) {
     margin-top: 6rem;
   }
 
   div:nth-child(2) {
     margin-top: 10rem;
-    margin-bottom: 4rem;
   }
 
   div:nth-child(3) {
@@ -51,7 +50,7 @@ export default () =>
       </MediaQuery>
     </div>
     <MediaQuery minDeviceWidth={992}>
-      <Wrapper className="row">
+      <Images className="row">
         <div className="col-lg-4">
           <ImageSecondary
             src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
@@ -70,6 +69,6 @@ export default () =>
             alt="product-photo-3"
           />
         </div>
-      </Wrapper>
+      </Images>
     </MediaQuery>
   </div>;
