@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
+import Responsive from "react-responsive";
+
+var MediaQuery = require("react-responsive");
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,26 +15,45 @@ const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: 0;
   }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 0;
+  }
 `;
 
 const Price = styled.h2`
   display: inline-block;
+  padding-left: .5rem;
   margin: 0;
   font-size: 1rem;
   line-height: 1.1875rem;
   font-family: Raleway, sans-serif;
   font-weight: 400;
   color: #111111;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
 `;
 
 const Id = styled.p`
   display: inline-block;
   margin: 0;
+  padding-right: .5rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Raleway, sans-serif;
   font-weight: 300;
   color: #171717;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 0;
+  }
 `;
 
 export default props =>
@@ -45,7 +67,9 @@ export default props =>
         minimumFractionDigits="0"
       />
     </Price>
-    <Id>
-      Item {props.id}
-    </Id>
+    <MediaQuery maxDeviceWidth={992}>
+      <Id>
+        Item {props.id}
+      </Id>
+    </MediaQuery>
   </Wrapper>;

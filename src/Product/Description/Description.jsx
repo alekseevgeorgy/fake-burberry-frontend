@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Content = styled.div`
-  padding: 0 .5rem 2rem .5rem;
+  padding: 0 1rem 2rem 1rem;
 
   @media screen and (min-width: 768px) {
     padding: 0 0 1.5rem;

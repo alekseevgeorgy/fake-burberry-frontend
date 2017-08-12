@@ -14,7 +14,7 @@ const WrapperButton = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem .5rem;
+  padding: 2rem 1rem;
 
   &:after {
     content: url(${triangle});
@@ -28,6 +28,10 @@ const WrapperButton = styled.div`
       content: none;
     }
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 4rem 0 1rem 0;
+
 `;
 
 const Heading = styled.h2`

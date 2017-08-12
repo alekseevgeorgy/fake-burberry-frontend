@@ -12,12 +12,6 @@ const Line = styled.hr`
   height: 1px;
   border: none;
   background-color: #c6c6c6;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -26,7 +20,7 @@ const Line = styled.hr`
 
 export default () => {
   return (
-    <main className="container">
+    <main>
       <Helmet>
         <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
       </Helmet>

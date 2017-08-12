@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Responsive from "react-responsive";
+
+var MediaQuery = require("react-responsive");
 
 const Image = styled.img`
   height: 400px;
@@ -7,6 +10,10 @@ const Image = styled.img`
 
   @media screen and (min-width: 768px) {
     height: 576px;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 651px;
   }
 `;
 
@@ -39,18 +46,24 @@ export default () => {
         src={process.env.PUBLIC_URL + "img/product-photo-1.png"}
         alt="product-photo-1"
       />
-      <Image
-        src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
-        alt="product-photo-2"
-      />
-      <Image
-        src={process.env.PUBLIC_URL + "img/product-photo-3.png"}
-        alt="product-photo-3"
-      />
-      <Image
-        src={process.env.PUBLIC_URL + "img/product-photo-4.png"}
-        alt="product-photo-4"
-      />
+      <MediaQuery maxDeviceWidth={991}>
+        <Image
+          src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
+          alt="product-photo-2"
+        />
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={991}>
+        <Image
+          src={process.env.PUBLIC_URL + "img/product-photo-3.png"}
+          alt="product-photo-3"
+        />
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={991}>
+        <Image
+          src={process.env.PUBLIC_URL + "img/product-photo-4.png"}
+          alt="product-photo-4"
+        />
+      </MediaQuery>
     </Images>
   );
 };

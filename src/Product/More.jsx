@@ -12,10 +12,8 @@ const Wrapper = styled.section`
 
 const Heading = styled.h2`
   display: inline-block;
-  padding-bottom: .5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 0;
-  border-bottom: 1px solid #111111;
   font-family: Raleway, sans-serif;
   font-size: 1rem;
   line-height: 1.1875rem;
