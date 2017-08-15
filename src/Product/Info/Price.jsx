@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Price = styled.h2`
+const PriceSt = styled.h2`
   display: inline-block;
   padding-left: .5rem;
   margin: 0;
@@ -57,10 +57,10 @@ const Id = styled.p`
   }
 `;
 
-export default function PriceExport(props) {
+export default function Price(props) {
   return (
     <Wrapper>
-      <Price>
+      <PriceSt>
         <FormattedNumber
           value={props.price}
           style="currency"
@@ -68,7 +68,7 @@ export default function PriceExport(props) {
           currencyDisplay="code"
           minimumFractionDigits="0"
         />
-      </Price>
+      </PriceSt>
       <MediaQuery maxDeviceWidth={992}>
         <Id>
           Item {props.id}
@@ -78,7 +78,7 @@ export default function PriceExport(props) {
   );
 }
 
-PriceExport.propTypes = {
+Price.propTypes = {
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,

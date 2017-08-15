@@ -6,7 +6,7 @@ import { FormattedNumber } from 'react-intl';
 import MediaQuery from 'react-responsive';
 import PropTypes from 'prop-types';
 
-const Card = styled.a`
+const CardSt = styled.a`
   display: block;
   margin-bottom: 2rem;
 
@@ -56,9 +56,9 @@ const Price = styled.h5`
   }
 `;
 
-export default function CardExport(props) {
+export default function Card(props) {
   return (
-    <Card>
+    <CardSt>
       <Image src={props.image} />
       <MediaQuery minDeviceWidth={922}>
         <Price>
@@ -85,11 +85,11 @@ export default function CardExport(props) {
           />
         </Price>
       </MediaQuery>
-    </Card>
+    </CardSt>
   );
 }
 
-CardExport.propTypes = {
+Card.propTypes = {
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
