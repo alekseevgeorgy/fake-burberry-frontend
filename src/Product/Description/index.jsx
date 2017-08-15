@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "./Button";
-import Description from "./Description";
-import MediaQuery from "react-responsive";
+import React from 'react';
+import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
+import Button from './Button';
+import Description from './Description';
 
 const ImagePrimary = styled.img`
   display: block;
@@ -34,7 +34,7 @@ const Images = styled.div`
 `;
 
 export default () =>
-  <div className="container">
+  (<div className="container">
     <div className="row">
       <div className="col-md-12 col-lg-4">
         <Button />
@@ -43,7 +43,7 @@ export default () =>
       <MediaQuery minDeviceWidth={992}>
         <div className="col-lg-8">
           <ImagePrimary
-            src={process.env.PUBLIC_URL + "img/product-photo-5.png"}
+            src={`${process.env.PUBLIC_URL}img/product-photo-5.png`}
             alt="product-photo-5"
           />
         </div>
@@ -53,22 +53,22 @@ export default () =>
       <Images className="row">
         <div className="col-lg-4">
           <ImageSecondary
-            src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
+            src={`${process.env.PUBLIC_URL}img/product-photo-2.png`}
             alt="product-photo-2"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={process.env.PUBLIC_URL + "img/product-photo-4.png"}
+            src={`${process.env.PUBLIC_URL}img/product-photo-4.png`}
             alt="product-photo-4"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={process.env.PUBLIC_URL + "img/product-photo-3.png"}
+            src={`${process.env.PUBLIC_URL}img/product-photo-3.png`}
             alt="product-photo-3"
           />
         </div>
       </Images>
     </MediaQuery>
-  </div>;
+  </div>);

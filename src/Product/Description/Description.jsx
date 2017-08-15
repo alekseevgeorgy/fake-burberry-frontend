@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Content = styled.div`
   padding: 0 1rem 2rem 1rem;
@@ -38,7 +38,7 @@ const Content = styled.div`
 `;
 
 export default () =>
-  <Content>
+  (<Content>
     <p>A refined car coat crafted in protective cotton gabardine.</p>
     <p>
       Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven
@@ -63,4 +63,4 @@ export default () =>
       <li>Made in Europe</li>
       <li>Item 39428531</li>
     </ul>
-  </Content>;
+  </Content>);

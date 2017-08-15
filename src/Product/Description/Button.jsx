@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import triangle from "../../img/triangle-up.svg";
+import React from 'react';
+import styled from 'styled-components';
+import triangle from '../../img/triangle-up.svg';
 
 const Button = styled.button`
   padding: 0;
@@ -44,8 +44,8 @@ const Heading = styled.h2`
 `;
 
 export default () =>
-  <Button>
+  (<Button>
     <WrapperButton>
       <Heading>DESCRIPTION</Heading>
     </WrapperButton>
-  </Button>;
+  </Button>);

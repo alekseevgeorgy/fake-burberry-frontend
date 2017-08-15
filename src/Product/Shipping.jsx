@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import triangle from "../img/triangle-up.svg";
+import React from 'react';
+import styled from 'styled-components';
+import triangle from '../img/triangle-up.svg';
 
 const Picture = styled.img`
   display: none;
@@ -74,12 +74,12 @@ const Text = Title.extend`
 `;
 
 export default () =>
-  <div className="container">
+  (<div className="container">
     <div className="row middle-lg">
       <div className="col-md-7">
         <Picture
-          src={process.env.PUBLIC_URL + "img/shipping.png"}
-          alt={"shipping-photo"}
+          src={`${process.env.PUBLIC_URL}img/shipping.png`}
+          alt={'shipping-photo'}
         />
       </div>
       <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4 ">
@@ -109,4 +109,4 @@ export default () =>
         </WrapperText>
       </div>
     </div>
-  </div>;
+  </div>);

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import MediaQuery from "react-responsive";
+import React from 'react';
+import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 const Image = styled.img`
   height: 400px;
@@ -37,31 +37,29 @@ const Images = styled.div`
   }
 `;
 
-export default () => {
-  return (
-    <Images>
+export default () => (
+  <Images>
+    <Image
+      src={`${process.env.PUBLIC_URL}img/product-photo-1.png`}
+      alt="product-photo-1"
+    />
+    <MediaQuery maxDeviceWidth={991}>
       <Image
-        src={process.env.PUBLIC_URL + "img/product-photo-1.png"}
-        alt="product-photo-1"
+        src={`${process.env.PUBLIC_URL}img/product-photo-2.png`}
+        alt="product-photo-2"
       />
-      <MediaQuery maxDeviceWidth={991}>
-        <Image
-          src={process.env.PUBLIC_URL + "img/product-photo-2.png"}
-          alt="product-photo-2"
-        />
-      </MediaQuery>
-      <MediaQuery maxDeviceWidth={991}>
-        <Image
-          src={process.env.PUBLIC_URL + "img/product-photo-3.png"}
-          alt="product-photo-3"
-        />
-      </MediaQuery>
-      <MediaQuery maxDeviceWidth={991}>
-        <Image
-          src={process.env.PUBLIC_URL + "img/product-photo-4.png"}
-          alt="product-photo-4"
-        />
-      </MediaQuery>
-    </Images>
-  );
-};
+    </MediaQuery>
+    <MediaQuery maxDeviceWidth={991}>
+      <Image
+        src={`${process.env.PUBLIC_URL}img/product-photo-3.png`}
+        alt="product-photo-3"
+      />
+    </MediaQuery>
+    <MediaQuery maxDeviceWidth={991}>
+      <Image
+        src={`${process.env.PUBLIC_URL}img/product-photo-4.png`}
+        alt="product-photo-4"
+      />
+    </MediaQuery>
+  </Images>
+);

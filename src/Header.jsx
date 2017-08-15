@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "./img/logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import logo from './img/logo.svg';
 
 const Header = styled.header`
   display: flex;
@@ -30,8 +30,8 @@ const Logo = styled.img`
 `;
 
 export default () =>
-  <Header>
-    <a href="#">
+  (<Header>
+    <a href="">
       <Logo src={logo} />
     </a>
-  </Header>;
+  </Header>);

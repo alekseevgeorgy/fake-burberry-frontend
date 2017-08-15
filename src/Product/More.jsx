@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   padding-left: .5rem;
@@ -34,9 +34,9 @@ const Link = styled.a`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <Heading>MORE FOR YOU</Heading>
     <Link>Men’s Black Trench Coats</Link>
     <Link>Men’s Short Trench Coats</Link>
     <Link>Men’s Long Trench Coats</Link>
-  </Wrapper>;
+  </Wrapper>);

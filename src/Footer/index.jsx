@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Navigation from "./Navigation";
-import Preferences from "./Preferences";
-import Help from "./Help";
+import React from 'react';
+import styled from 'styled-components';
+import Navigation from './Navigation';
+import Preferences from './Preferences';
+import Help from './Help';
 
 const Footer = styled.footer`
   padding: 2rem .5rem;
@@ -17,10 +17,10 @@ const Footer = styled.footer`
 `;
 
 export default () =>
-  <Footer>
+  (<Footer>
     <div className="container">
       <Navigation />
       <Preferences />
       <Help />
     </div>
-  </Footer>;
+  </Footer>);

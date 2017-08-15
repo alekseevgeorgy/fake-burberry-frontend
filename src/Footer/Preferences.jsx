@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const Button = styled.button`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <Button>Shipping country: Russian Federation</Button>
     <Button>Language: English</Button>
-  </Wrapper>;
+  </Wrapper>);

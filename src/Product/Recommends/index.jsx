@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Card from "./Card";
+import React from 'react';
+import styled from 'styled-components';
+import Card from './Card';
 
 const Wrapper = styled.section`
   padding: 0 .5rem;
@@ -29,7 +29,7 @@ const Heading = styled.h2`
 `;
 
 export default () =>
-  <div className="container">
+  (<div className="container">
     <Wrapper>
       <Heading>WE RECOMMEND</Heading>
       <div className="row">
@@ -67,4 +67,4 @@ export default () =>
         </div>
       </div>
     </Wrapper>
-  </div>;
+  </div>);

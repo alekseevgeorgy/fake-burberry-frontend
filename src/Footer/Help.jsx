@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   @media screen and (min-width: 48rem) {
@@ -31,7 +31,7 @@ const Link = styled.a`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <Heading>Need help?</Heading>
     <Link>Find out more and contact us</Link>
-  </Wrapper>;
+  </Wrapper>);
