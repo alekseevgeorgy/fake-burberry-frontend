@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "eslint --ext .jsx,.js --fix src/",
+    "test": "eslint --ext .jsx,.js src/",
     "eject": "react-scripts eject",
     "precommit": "yarn run test",
     "prepush": "yarn run test"
