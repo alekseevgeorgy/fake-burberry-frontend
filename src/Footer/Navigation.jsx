@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Navigation = styled.nav`
   display: none;
@@ -33,7 +33,7 @@ const Link = styled.a`
 `;
 
 export default () =>
-  <Navigation>
+  (<Navigation>
     <div className="row">
       <div className="col-md-3">
         <Heading>CUSTOMER SERVICE</Heading>
@@ -63,4 +63,4 @@ export default () =>
         <Link href="#">Japan Only - SCTL indications</Link>
       </div>
     </div>
-  </Navigation>;
+  </Navigation>);

@@ -1,7 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import MediaQuery from "react-responsive";
+/* eslint react/style-prop-object: "off" */
+
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import MediaQuery from 'react-responsive';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +22,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Price = styled.h2`
+const PriceSt = styled.h2`
   display: inline-block;
   padding-left: .5rem;
   margin: 0;
@@ -54,20 +57,29 @@ const Id = styled.p`
   }
 `;
 
-export default props =>
-  <Wrapper>
-    <Price>
-      <FormattedNumber
-        value={props.price}
-        style="currency"
-        currency={props.currency}
-        currencyDisplay="code"
-        minimumFractionDigits="0"
-      />
-    </Price>
-    <MediaQuery maxDeviceWidth={992}>
-      <Id>
-        Item {props.id}
-      </Id>
-    </MediaQuery>
-  </Wrapper>;
+export default function Price(props) {
+  return (
+    <Wrapper>
+      <PriceSt>
+        <FormattedNumber
+          value={props.price}
+          style="currency"
+          currency={props.currency}
+          currencyDisplay="code"
+          minimumFractionDigits="0"
+        />
+      </PriceSt>
+      <MediaQuery maxDeviceWidth={992}>
+        <Id>
+          Item {props.id}
+        </Id>
+      </MediaQuery>
+    </Wrapper>
+  );
+}
+
+Price.propTypes = {
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};

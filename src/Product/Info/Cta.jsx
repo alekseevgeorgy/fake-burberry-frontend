@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import MediaQuery from "react-responsive";
+import React from 'react';
+import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ const ButtonHelp = styled.button`
 `;
 
 export default () =>
-  <div>
+  (<div>
     <MediaQuery maxDeviceWidth={991}>
       <Wrapper>
         <Button primary>SELECT A SIZE</Button>
@@ -78,4 +78,4 @@ export default () =>
     <MediaQuery maxDeviceWidth={991}>
       <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
     </MediaQuery>
-  </div>;
+  </div>);

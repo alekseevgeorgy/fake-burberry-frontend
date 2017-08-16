@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,11 +26,11 @@ const Button = styled.button`
   margin-right: 1rem;
   background-color: ${props => props.colour};
   box-shadow: ${props =>
-    props.selected ? "inset 0 0 0 1px #232122;" : "none"};
+    (props.selected ? 'inset 0 0 0 1px #232122;' : 'none')};
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <Button colour="#232122" />
     <Button colour="#cfa880" selected />
-  </Wrapper>;
+  </Wrapper>);

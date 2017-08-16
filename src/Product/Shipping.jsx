@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import triangle from "../img/triangle-up.svg";
+import React from 'react';
+import styled from 'styled-components';
+import triangle from '../img/triangle-up.svg';
 
 const Picture = styled.img`
   display: none;
@@ -74,13 +74,10 @@ const Text = Title.extend`
 `;
 
 export default () =>
-  <div className="container">
+  (<div className="container">
     <div className="row middle-lg">
       <div className="col-md-7">
-        <Picture
-          src={process.env.PUBLIC_URL + "img/shipping.png"}
-          alt={"shipping-photo"}
-        />
+        <Picture src={`${process.env.PUBLIC_URL}img/shipping.png`} alt={'shipping-photo'} />
       </div>
       <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4 ">
         <Button>
@@ -91,22 +88,14 @@ export default () =>
         </Button>
         <WrapperText>
           <Title>Free Next Day Delivery</Title>
-          <Text>
-            Order before 7pm Monday to Thursday for delivery the next day
-          </Text>
+          <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
           <Title>Collect-in-Store</Title>
-          <Text>
-            Order online today and pick up your items in store as early as
-            tomorrow
-          </Text>
+          <Text>Order online today and pick up your items in store as early as tomorrow</Text>
           <Title>Free Returns</Title>
           <Text>Enjoy free returns on your order</Text>
           <Title>Free Gift Packaging</Title>
-          <Text>
-            Discover our gift packaging, a gold lined box tied with a coloured
-            ribbon
-          </Text>
+          <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
         </WrapperText>
       </div>
     </div>
-  </div>;
+  </div>);

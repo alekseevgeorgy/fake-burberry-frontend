@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Helmet } from "react-helmet";
-import Info from "./Info";
-import Description from "./Description";
-import Shipping from "./Shipping";
-import Recommends from "./Recommends";
-import More from "./More";
+import React from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
+import Info from './Info';
+import Description from './Description';
+import Shipping from './Shipping';
+import Recommends from './Recommends';
+import More from './More';
 
 const Line = styled.hr`
   margin: 0;
@@ -18,20 +18,18 @@ const Line = styled.hr`
   }
 `;
 
-export default () => {
-  return (
-    <main>
-      <Helmet>
-        <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-      </Helmet>
-      <Info />
-      <Line />
-      <Description />
-      <Line />
-      <Shipping />
-      <Line />
-      <Recommends />
-      <More />
-    </main>
-  );
-};
+export default () => (
+  <main>
+    <Helmet>
+      <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+    </Helmet>
+    <Info />
+    <Line />
+    <Description />
+    <Line />
+    <Shipping />
+    <Line />
+    <Recommends />
+    <More />
+  </main>
+);

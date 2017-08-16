@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,9 +27,9 @@ const ButtonHelp = styled.button`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <Size>
       Size: <b>XL</b>
     </Size>
     <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
-  </Wrapper>;
+  </Wrapper>);

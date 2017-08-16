@@ -1,9 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import MediaQuery from "react-responsive";
+/* eslint react/style-prop-object: "off" */
 
-const Card = styled.a`
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import MediaQuery from 'react-responsive';
+import PropTypes from 'prop-types';
+
+const CardSt = styled.a`
   display: block;
   margin-bottom: 2rem;
 
@@ -53,32 +56,42 @@ const Price = styled.h5`
   }
 `;
 
-export default props =>
-  <Card>
-    <Image src={props.image} />
-    <MediaQuery minDeviceWidth={922}>
-      <Price>
-        <FormattedNumber
-          value={props.price}
-          style="currency"
-          currency={props.currency}
-          currencyDisplay="code"
-          minimumFractionDigits="0"
-        />
-      </Price>
-    </MediaQuery>
-    <Name>
-      {props.name}
-    </Name>
-    <MediaQuery maxDeviceWidth={921}>
-      <Price>
-        <FormattedNumber
-          value={props.price}
-          style="currency"
-          currency={props.currency}
-          currencyDisplay="code"
-          minimumFractionDigits="0"
-        />
-      </Price>
-    </MediaQuery>
-  </Card>;
+export default function Card(props) {
+  return (
+    <CardSt>
+      <Image src={props.image} />
+      <MediaQuery minDeviceWidth={922}>
+        <Price>
+          <FormattedNumber
+            value={props.price}
+            style="currency"
+            currency={props.currency}
+            currencyDisplay="code"
+            minimumFractionDigits="0"
+          />
+        </Price>
+      </MediaQuery>
+      <Name>
+        {props.name}
+      </Name>
+      <MediaQuery maxDeviceWidth={921}>
+        <Price>
+          <FormattedNumber
+            value={props.price}
+            style="currency"
+            currency={props.currency}
+            currencyDisplay="code"
+            minimumFractionDigits="0"
+          />
+        </Price>
+      </MediaQuery>
+    </CardSt>
+  );
+}
+
+Card.propTypes = {
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

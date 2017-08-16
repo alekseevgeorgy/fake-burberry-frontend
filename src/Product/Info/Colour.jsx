@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Colour = styled.p`
   padding-left: 1rem;
@@ -20,8 +20,8 @@ const Colour = styled.p`
 `;
 
 export default () =>
-  <div>
+  (<div>
     <Colour>
       Colour: <b>Honey</b>
     </Colour>
-  </div>;
+  </div>);
