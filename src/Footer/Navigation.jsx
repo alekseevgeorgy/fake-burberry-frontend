@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 const Navigation = styled.nav`
   display: none;
@@ -32,6 +33,22 @@ const Link = styled.a`
   color: #999999;
 `;
 
+const Image = styled.img`
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+`;
+
+const FindStore = styled.a`
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #171717;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: #171717;
+`;
+
 export default () =>
   (<Navigation>
     <div className="row">
@@ -62,5 +79,11 @@ export default () =>
         <Link href="#">Accessibility Statement</Link>
         <Link href="#">Japan Only - SCTL indications</Link>
       </div>
+      <MediaQuery minDeviceWidth={992}>
+        <div className="col-md-3">
+          <Image src="https://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg?$BBY_V2_BASIC$&wid=464" />
+          <FindStore>Find a store</FindStore>
+        </div>
+      </MediaQuery>
     </div>
   </Navigation>);

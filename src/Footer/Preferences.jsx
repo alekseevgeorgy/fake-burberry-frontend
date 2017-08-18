@@ -20,8 +20,19 @@ const Button = styled.button`
   color: #999999;
 `;
 
+const BlackColour = Button.extend`
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: #171717;
+`;
+
 export default () =>
   (<Wrapper>
-    <Button>Shipping country: Russian Federation</Button>
-    <Button>Language: English</Button>
+    <Button>
+      Shipping country: <BlackColour>Russian Federation</BlackColour>
+    </Button>
+    <Button>
+      Language: <BlackColour>English</BlackColour>
+    </Button>
   </Wrapper>);
