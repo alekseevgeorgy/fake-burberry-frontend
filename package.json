@@ -26,9 +26,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "eslint --ext .jsx,.js src/",
+    "test": "react-scripts test --env=jsdom && yarn run lint",
     "eject": "react-scripts eject",
-    "precommit": "yarn run test",
-    "prepush": "yarn run test"
+    "lint": "eslint --ext .jsx,.js src/",
+    "precommit": "yarn run lint",
+    "prepush": "yarn run lint"
   }
 }
