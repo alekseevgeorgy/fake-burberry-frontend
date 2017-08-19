@@ -56,6 +56,11 @@ const CurrentStore = styled.button`
   text-align: left;
   color: #999999;
   background-color: inherit;
+`;
+
+const Span = styled.span`
+  display: flex;
+  align-items: center;
 
   &:after {
     content: "";
@@ -81,7 +86,9 @@ export default () =>
   (<Header className="container">
     <Hamburger />
     <MediaQuery minWidth={768}>
-      <CurrentStore>Shopping in: United Kingdom (£)</CurrentStore>
+      <CurrentStore>
+        Shopping in:&nbsp;<Span>United Kingdom (£)</Span>
+      </CurrentStore>
     </MediaQuery>
     <Link to="/">
       <Logo src={logo} />

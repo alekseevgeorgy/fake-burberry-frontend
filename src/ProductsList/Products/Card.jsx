@@ -38,13 +38,18 @@ const Style = styled.p`
 
 const Button = styled.button`
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
+  flex-shrink: 0;
   width: 0.875rem;
   height: 0.875rem;
   border: none;
   background: url(${fav}) 0 0 no-repeat;
   background-size: contain;
   background-color: inherit;
+
+  @media screen and (min-width: 48rem) {
+    margin-left: 1rem;
+  }
 `;
 
 const Name = styled.h3`

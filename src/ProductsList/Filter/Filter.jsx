@@ -39,11 +39,17 @@ const Button = styled.button`
     width: 0.75rem;
     height: 0.375rem;
   }
+
+  @media screen and (min-width: 48rem) {
+    margin-right: 3rem;
+  }
 `;
 
 const ButtonRight = Button.extend`
-  padding-left: 1rem;
-  margin-right: 0;
+  @media screen and (min-width: 48rem) {
+    padding-left: 1rem;
+    margin-right: 0;
+  }
 `;
 
 export default () =>
