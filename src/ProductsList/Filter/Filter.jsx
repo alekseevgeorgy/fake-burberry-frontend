@@ -1,5 +1,4 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 import arrow from '../../img/arrow.svg';
 
@@ -58,13 +57,8 @@ export default () =>
       <Button>Category</Button>
       <Button>Colour</Button>
       <Button>Size</Button>
-      <MediaQuery maxWidth={767}>
-        <Button>Sort by price</Button>
-      </MediaQuery>
     </Wrapper>
-    <MediaQuery minWidth={768}>
-      <Wrapper>
-        <ButtonRight>Sort by price</ButtonRight>
-      </Wrapper>
-    </MediaQuery>
+    <Wrapper>
+      <ButtonRight>Sort by price</ButtonRight>
+    </Wrapper>
   </Filter>);

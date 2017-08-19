@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Button = styled(NavLink)`
+const Link = styled(NavLink)`
   padding: 1rem 1rem;
   border: none;
   text-decoration: none;
@@ -27,11 +27,9 @@ const Button = styled(NavLink)`
 
 export default () =>
   (<Wrapper>
-    <Button to="/women">WOMEN</Button>
-    <Button to="/men/" selected>
-      MEN
-    </Button>
-    <Button to="/children">CHILDREN</Button>
-    <Button to="/beauty">BEAUTY</Button>
-    <Button to="/experience">EXPERIENCE</Button>
+    <Link to="/women">WOMEN</Link>
+    <Link to="/men">MEN</Link>
+    <Link to="/children">CHILDREN</Link>
+    <Link to="/beauty">BEAUTY</Link>
+    <Link to="/experience">EXPERIENCE</Link>
   </Wrapper>);
