@@ -40,7 +40,7 @@ export default () =>
         <Button />
         <Description />
       </div>
-      <MediaQuery minDeviceWidth={992}>
+      <MediaQuery minWidth={992}>
         <div className="col-lg-8">
           <ImagePrimary
             src={`${process.env.PUBLIC_URL}/img/product-photo-5.png`}
@@ -49,7 +49,7 @@ export default () =>
         </div>
       </MediaQuery>
     </div>
-    <MediaQuery minDeviceWidth={992}>
+    <MediaQuery minWidth={992}>
       <Images className="row">
         <div className="col-lg-4">
           <ImageSecondary

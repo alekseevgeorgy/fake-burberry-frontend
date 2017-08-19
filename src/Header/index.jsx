@@ -6,7 +6,7 @@ import Subheader from './Subheader';
 export default () =>
   (<div>
     <Header />
-    <MediaQuery minDeviceWidth={768}>
+    <MediaQuery minWidth={768}>
       <Subheader />
     </MediaQuery>
   </div>);

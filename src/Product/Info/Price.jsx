@@ -69,7 +69,7 @@ export default function Price(props) {
           minimumFractionDigits="0"
         />
       </PriceSt>
-      <MediaQuery maxDeviceWidth={992}>
+      <MediaQuery maxWidth={992}>
         <Id>
           Item {props.id}
         </Id>

@@ -81,11 +81,11 @@ export default () =>
           </div>
         </div>
       </Wrapper>
-      <MediaQuery minDeviceWidth={768}>
+      <MediaQuery minWidth={768}>
         <Filter />
       </MediaQuery>
     </div>
-    <MediaQuery maxDeviceWidth={767}>
+    <MediaQuery maxWidth={767}>
       <Filter />
     </MediaQuery>
   </Background>);

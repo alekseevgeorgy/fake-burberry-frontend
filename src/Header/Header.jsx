@@ -80,7 +80,7 @@ const Logo = styled.img`
 export default () =>
   (<Header className="container">
     <Hamburger />
-    <MediaQuery minDeviceWidth={768}>
+    <MediaQuery minWidth={768}>
       <CurrentStore>Shopping in: United Kingdom (£)</CurrentStore>
     </MediaQuery>
     <Link to="/">

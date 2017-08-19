@@ -79,7 +79,7 @@ export default () =>
         <Link href="#">Accessibility Statement</Link>
         <Link href="#">Japan Only - SCTL indications</Link>
       </div>
-      <MediaQuery minDeviceWidth={992}>
+      <MediaQuery minWidth={992}>
         <div className="col-md-3">
           <Image src="https://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg?$BBY_V2_BASIC$&wid=464" />
           <FindStore>Find a store</FindStore>

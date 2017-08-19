@@ -40,13 +40,13 @@ const Images = styled.div`
 export default () =>
   (<Images>
     <Image src={`${process.env.PUBLIC_URL}/img/product-photo-1.png`} alt="product-photo-1" />
-    <MediaQuery maxDeviceWidth={991}>
+    <MediaQuery maxWidth={991}>
       <Image src={`${process.env.PUBLIC_URL}/img/product-photo-2.png`} alt="product-photo-2" />
     </MediaQuery>
-    <MediaQuery maxDeviceWidth={991}>
+    <MediaQuery maxWidth={991}>
       <Image src={`${process.env.PUBLIC_URL}/img/product-photo-3.png`} alt="product-photo-3" />
     </MediaQuery>
-    <MediaQuery maxDeviceWidth={991}>
+    <MediaQuery maxWidth={991}>
       <Image src={`${process.env.PUBLIC_URL}/img/product-photo-4.png`} alt="product-photo-4" />
     </MediaQuery>
   </Images>);
