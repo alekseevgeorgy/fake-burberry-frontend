@@ -105,11 +105,11 @@ const Price = styled.p`
 export default function Card(props) {
   return (
     <Wrapper>
-      <Link to={`/${props.to}/`}>
+      <Link to={props.to}>
         <Image src={props.src} />
       </Link>
       <WrapperInfo>
-        <LinkInfo to={`/${props.to}/`}>
+        <LinkInfo to={props.to}>
           <Style>
             {props.productStyle}
           </Style>
