@@ -34,7 +34,7 @@ const Name = styled.h3`
     font-family: Raleway;
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.67;
+    line-height: 1.25rem;
   }
 `;
 
@@ -42,14 +42,11 @@ const Price = styled.h5`
   margin: 0;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
-  line-height: 1.17;
+  line-height: 0.875rem;
   font-weight: 400;
   color: #999999;
 
   @media screen and (min-width: 62rem) {
-    position: relative;
-    top: 4rem;
-    margin-bottom: -1rem;
     font-size: 12px;
     line-height: 1rem;
     color: #171717;
@@ -60,31 +57,18 @@ export default function Card(props) {
   return (
     <CardSt>
       <Image src={props.image} />
-      <MediaQuery minDeviceWidth={922}>
-        <Price>
-          <FormattedNumber
-            value={props.price}
-            style="currency"
-            currency={props.currency}
-            currencyDisplay="code"
-            minimumFractionDigits="0"
-          />
-        </Price>
-      </MediaQuery>
       <Name>
         {props.name}
       </Name>
-      <MediaQuery maxDeviceWidth={921}>
-        <Price>
-          <FormattedNumber
-            value={props.price}
-            style="currency"
-            currency={props.currency}
-            currencyDisplay="code"
-            minimumFractionDigits="0"
-          />
-        </Price>
-      </MediaQuery>
+      <Price>
+        <FormattedNumber
+          value={props.price}
+          style="currency"
+          currency={props.currency}
+          currencyDisplay="code"
+          minimumFractionDigits="0"
+        />
+      </Price>
     </CardSt>
   );
 }
