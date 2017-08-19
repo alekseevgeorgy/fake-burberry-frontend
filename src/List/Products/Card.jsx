@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FormattedNumber } from 'react-intl';
 import PropTypes from 'prop-types';
-import like from '../../img/like.svg';
+import fav from '../../img/fav.svg';
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.div`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -18,24 +18,33 @@ const Image = styled.img`
   width: 100%;
 `;
 
+const WrapperInfo = styled.div`display: flex;`;
+
+const LinkInfo = styled(Link)`
+  text-decoration: none;
+`;
+
 const Style = styled.p`
+  display: inline-block;
   margin-top: 1rem;
   margin-bottom: .5rem;
-  display: flex;
-  justify-content: space-between;
+  padding-right: auto;
   align-items: center;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
   color: #171717;
+`;
 
-  &:after {
-    content: "";
-    background: url(${like}) 0 0 no-repeat;
-    background-size: contain;
-    width: 0.875rem;
-    height: 0.875rem;
-  }
+const Button = styled.button`
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: none;
+  background: url(${fav}) 0 0 no-repeat;
+  background-size: contain;
+  background-color: inherit;
 `;
 
 const Name = styled.h3`
@@ -87,26 +96,33 @@ const Price = styled.p`
 
 export default function Card(props) {
   return (
-    <Wrapper to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
-      <Image src={props.src} />
-      <Style>
-        {props.productStyle}
-      </Style>
-      <Name>
-        {props.name}
-      </Name>
-      <Colour>
-        Available in <ColourLink href="">{props.colours} colours</ColourLink>
-      </Colour>
-      <Price>
-        <FormattedNumber
-          value={props.value}
-          style="currency"
-          currency="RUB"
-          currencyDisplay="symbol"
-          minimumFractionDigits="0"
-        />
-      </Price>
+    <Wrapper>
+      <Link to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
+        <Image src={props.src} />
+      </Link>
+      <WrapperInfo>
+        <LinkInfo to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
+          <Style>
+            {props.productStyle}
+          </Style>
+          <Name>
+            {props.name}
+          </Name>
+          <Colour>
+            Available in <ColourLink href="">{props.colours} colours</ColourLink>
+          </Colour>
+          <Price>
+            <FormattedNumber
+              value={props.value}
+              style="currency"
+              currency="RUB"
+              currencyDisplay="symbol"
+              minimumFractionDigits="0"
+            />
+          </Price>
+        </LinkInfo>
+        <Button />
+      </WrapperInfo>
     </Wrapper>
   );
 }
