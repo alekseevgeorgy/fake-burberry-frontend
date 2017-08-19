@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
-import MediaQuery from 'react-responsive';
 import PropTypes from 'prop-types';
 
 const CardSt = styled.a`
