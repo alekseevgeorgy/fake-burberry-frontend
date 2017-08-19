@@ -4,6 +4,11 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+
+  @media screen and (min-width: 48rem) {
+    flex-direction: row;
+  }
 `;
 
 const Button = styled.button`
@@ -12,6 +17,7 @@ const Button = styled.button`
   margin-bottom: 1rem;
   border: none;
   padding: 0;
+  text-align: left;
   font-family: Raleway, serif;
   font-weight: 400;
   font-size: 0.75rem;
@@ -24,16 +30,7 @@ const Button = styled.button`
   }
 `;
 
-const BlackColour = Button.extend`
-  display: inline-block;
-  margin-right: 0;
-  margin-bottom: 0;
-  color: #171717;
-
-  @media screen and (min-width: 62rem) {
-    margin-right: 0;
-  }
-`;
+const BlackColour = styled.span`color: #171717;`;
 
 export default () =>
   (<Wrapper>

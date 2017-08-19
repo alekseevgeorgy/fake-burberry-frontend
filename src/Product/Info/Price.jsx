@@ -65,7 +65,7 @@ export default function Price(props) {
           value={props.price}
           style="currency"
           currency={props.currency}
-          currencyDisplay="code"
+          currencyDisplay="symbol"
           minimumFractionDigits="0"
         />
       </PriceSt>

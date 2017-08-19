@@ -9,21 +9,13 @@ const Filter = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   overflow-x: scroll;
-`;
-
-const Refinement = styled.p`
-  margin: 0;
-  padding-right: 2rem;
-  white-space: nowrap;
-  font-family: Raleway, sans-serif;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #171717;
 
   @media screen and (min-width: 48rem) {
-    display: none;
+    justify-content: space-between;
   }
 `;
+
+const Wrapper = styled.div`display: flex;`;
 
 const Button = styled.button`
   display: flex;
@@ -38,13 +30,6 @@ const Button = styled.button`
   background-color: inherit;
   color: #171717;
 
-  ${props =>
-    props.alignRight &&
-    `
-    margin-left: auto;
-    margin-right: 0;
-  `};
-
   &:after {
     content: "";
     margin-left: .5rem;
@@ -53,23 +38,16 @@ const Button = styled.button`
     width: 0.75rem;
     height: 0.375rem;
   }
-
-  @media screen and (min-width: 48rem) {
-    margin-right: 3rem;
-
-    ${props =>
-    props.alignRight &&
-      `
-      margin-right: 0;
-    `};
-  }
 `;
+
+const ButtonRight = Button.extend`margin-right: 0;`;
 
 export default () =>
   (<Filter>
-    <Refinement>Refine by</Refinement>
-    <Button>Category</Button>
-    <Button>Colour</Button>
-    <Button>Size</Button>
-    <Button alignRight>Sort by price</Button>
+    <Wrapper>
+      <Button>Category</Button>
+      <Button>Colour</Button>
+      <Button>Size</Button>
+    </Wrapper>
+    <ButtonRight>Sort by price</ButtonRight>
   </Filter>);
