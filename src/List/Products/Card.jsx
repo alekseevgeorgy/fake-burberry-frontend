@@ -88,7 +88,7 @@ const Price = styled.p`
 
 export default function Card(props) {
   return (
-    <Wrapper to="/product">
+    <Wrapper to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
       <Image src={props.src} />
       <Style>
         {props.productStyle}

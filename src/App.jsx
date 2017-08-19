@@ -16,7 +16,7 @@ export default () =>
       <div>
         <Header />
         <Route exact path="/" component={List} />
-        <Route exact path="/product" component={Product} />
+        <Route path="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat" component={Product} />
         <Footer />
       </div>
     </Router>

@@ -43,7 +43,7 @@ export default () =>
       <MediaQuery minDeviceWidth={992}>
         <div className="col-lg-8">
           <ImagePrimary
-            src={`${process.env.PUBLIC_URL}img/product-photo-5.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-5.png`}
             alt="product-photo-5"
           />
         </div>
@@ -53,19 +53,19 @@ export default () =>
       <Images className="row">
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-2.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-2.png`}
             alt="product-photo-2"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-4.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-4.png`}
             alt="product-photo-4"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-3.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-3.png`}
             alt="product-photo-3"
           />
         </div>
