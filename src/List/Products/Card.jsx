@@ -79,7 +79,6 @@ const ColourLink = styled.a`
 
 const Price = styled.p`
   margin: 0;
-  padding-bottom: 1rem;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;

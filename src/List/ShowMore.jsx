@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Current = styled.h4`
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   text-align: center;
   font-family: Lora, serif;
@@ -10,6 +10,12 @@ const Current = styled.h4`
   font-weight: 400;
   line-height: 1.1875rem;
   color: #171717;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 `;
 
 const Button = styled.button`

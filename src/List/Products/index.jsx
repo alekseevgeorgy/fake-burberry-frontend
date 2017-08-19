@@ -24,11 +24,16 @@ const Heading = styled.h2`
 `;
 
 const Line = styled.hr`
-  margin-top: 16px;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   height: 1px;
   border: none;
   background-color: #c6c6c6;
+
+  @media screen and (min-width: 48rem) {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 export default () =>

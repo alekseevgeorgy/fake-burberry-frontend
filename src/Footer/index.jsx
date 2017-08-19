@@ -5,7 +5,7 @@ import Preferences from './Preferences';
 import Help from './Help';
 
 const Footer = styled.footer`
-  padding: 2rem .5rem;
+  padding: 2rem 0;
   margin-top: 4rem;
   background-color: #f3f3f3;
 
@@ -13,6 +13,10 @@ const Footer = styled.footer`
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding: 4rem 0 2rem;
   }
 `;
 

@@ -18,6 +18,10 @@ const Button = styled.button`
   line-height: 16px;
   background-color: #f3f3f3;
   color: #999999;
+
+  @media screen and (min-width: 62rem) {
+    margin-right: 3rem;
+  }
 `;
 
 const BlackColour = Button.extend`
@@ -25,6 +29,10 @@ const BlackColour = Button.extend`
   margin-right: 0;
   margin-bottom: 0;
   color: #171717;
+
+  @media screen and (min-width: 62rem) {
+    margin-right: 0;
+  }
 `;
 
 export default () =>

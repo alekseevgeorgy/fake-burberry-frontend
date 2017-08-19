@@ -35,7 +35,7 @@ const Button = styled.button`
   border: none;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
-  line-height: 1.33;
+  line-height: 1rem;
   background-color: inherit;
   color: #171717;
 
@@ -57,6 +57,12 @@ const Button = styled.button`
 
   @media screen and (min-width: 48rem) {
     margin-right: 3rem;
+
+    ${props =>
+    props.alignRight &&
+      `
+      margin-right: 0;
+    `};
   }
 `;
 
