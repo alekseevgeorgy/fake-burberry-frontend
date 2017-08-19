@@ -18,7 +18,10 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const WrapperInfo = styled.div`display: flex;`;
+const WrapperInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const LinkInfo = styled(Link)`
   text-decoration: none;
