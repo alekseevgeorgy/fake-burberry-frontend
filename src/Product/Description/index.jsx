@@ -6,14 +6,14 @@ import Description from './Description';
 
 const ImagePrimary = styled.img`
   display: block;
-  height: 861px;
+  width: 100%;
   flex-shrink: 0;
   margin-top: 4rem;
 `;
 
 const ImageSecondary = styled.img`
   display: block;
-  width: 315px;
+  width: 100%;
   flex-shrink: 0;
 `;
 
