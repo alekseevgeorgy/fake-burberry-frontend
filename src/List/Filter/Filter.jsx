@@ -14,7 +14,6 @@ const Filter = styled.div`
 const Refinement = styled.p`
   margin: 0;
   padding-right: 2rem;
-  padding-left: .5rem;
   white-space: nowrap;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
 import Filter from './Filter';
 
 const Background = styled.div`
@@ -82,11 +81,6 @@ export default () =>
           </div>
         </div>
       </Wrapper>
-      <MediaQuery minWidth={768}>
-        <Filter />
-      </MediaQuery>
-    </div>
-    <MediaQuery maxWidth={767}>
       <Filter />
-    </MediaQuery>
+    </div>
   </Background>);
