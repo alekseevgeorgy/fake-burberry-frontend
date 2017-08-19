@@ -9,11 +9,6 @@ const Filter = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   overflow-x: scroll;
-
-  Button:last-child {
-    margin-right: 0;
-    margin-left: auto;
-  }
 `;
 
 const Refinement = styled.p`
@@ -44,6 +39,13 @@ const Button = styled.button`
   background-color: inherit;
   color: #171717;
 
+  ${props =>
+    props.alignRight &&
+    `
+    margin-left: auto;
+    margin-right: 0;
+  `};
+
   &:after {
     content: "";
     margin-left: .5rem;
@@ -64,5 +66,5 @@ export default () =>
     <Button>Category</Button>
     <Button>Colour</Button>
     <Button>Size</Button>
-    <Button>Sort by price</Button>
+    <Button alignRight>Sort by price</Button>
   </Filter>);
