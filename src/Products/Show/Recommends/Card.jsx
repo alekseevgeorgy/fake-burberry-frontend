@@ -5,12 +5,16 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FormattedNumber } from 'react-intl';
 import PropTypes from 'prop-types';
-import fav from '../../img/fav.svg';
+import fav from '../../../img/fav.svg';
 
 const Wrapper = styled.div`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 4rem;
+  }
 `;
 
 const Image = styled.img`

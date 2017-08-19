@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import triangle from '../../img/triangle-up.svg';
+import triangle from '../../../img/triangle-up.svg';
 
 const Button = styled.button`
   padding: 0;

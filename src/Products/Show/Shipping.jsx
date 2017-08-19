@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import triangle from '../img/triangle-up.svg';
+import triangle from '../../img/triangle-up.svg';
 
 const Picture = styled.img`
   display: none;

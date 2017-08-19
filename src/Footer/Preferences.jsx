@@ -25,6 +25,10 @@ const Button = styled.button`
   background-color: #f3f3f3;
   color: #999999;
 
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: 62rem) {
     margin-right: 3rem;
   }

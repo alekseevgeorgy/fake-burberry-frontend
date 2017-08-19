@@ -4,8 +4,8 @@ import ruLocaleData from 'react-intl/locale-data/ru';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
-import Product from './Product';
-import ProductsList from './ProductsList';
+import Show from './Products/Show';
+import List from './Products/List';
 import Footer from './Footer';
 
 addLocaleData(ruLocaleData);
@@ -16,8 +16,8 @@ export default () =>
       <div>
         <Header />
         <Switch>
-          <Route exact path="/:section" component={ProductsList} />
-          <Route path="/:section/:subsection/:id" component={Product} />
+          <Route exact path="/:section" component={List} />
+          <Route path="/:section/:subsection/:id" component={Show} />
           <Redirect from="/" to="/men/" />
         </Switch>
         <Footer />

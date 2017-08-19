@@ -16,7 +16,7 @@ const Footer = styled.footer`
   }
 
   @media screen and (min-width: 62rem) {
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 3rem;
   }
 `;
 

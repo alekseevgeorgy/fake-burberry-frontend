@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import arrow from '../../img/arrow.svg';
+import arrow from '../../../img/arrow.svg';
 
 const Filter = styled.div`
   padding-top: 1.5rem;
