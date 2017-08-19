@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 import arrow from '../../img/arrow.svg';
 
@@ -40,7 +41,10 @@ const Button = styled.button`
   }
 `;
 
-const ButtonRight = Button.extend`margin-right: 0;`;
+const ButtonRight = Button.extend`
+  padding-left: 1rem;
+  margin-right: 0;
+`;
 
 export default () =>
   (<Filter>
@@ -48,6 +52,13 @@ export default () =>
       <Button>Category</Button>
       <Button>Colour</Button>
       <Button>Size</Button>
+      <MediaQuery maxWidth={767}>
+        <Button>Sort by price</Button>
+      </MediaQuery>
     </Wrapper>
-    <ButtonRight>Sort by price</ButtonRight>
+    <MediaQuery minWidth={768}>
+      <Wrapper>
+        <ButtonRight>Sort by price</ButtonRight>
+      </Wrapper>
+    </MediaQuery>
   </Filter>);

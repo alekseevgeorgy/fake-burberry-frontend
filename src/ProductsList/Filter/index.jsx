@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Filter from './Filter';
 
 const Background = styled.div`
@@ -39,7 +40,7 @@ const Text = styled.p`
   opacity: 0.87;
 `;
 
-const TextLink = styled.a`
+const TextLink = styled(Link)`
   padding-bottom: 1px;
   border-bottom: 1px solid #171717;
   text-decoration: none;
@@ -74,7 +75,7 @@ export default () =>
           <div className="col-xs-12 col-md-9 col-lg-7">
             <Text>
               Explore our menswear collection for the season. Sculptural knitwear,{' '}
-              <TextLink>sweatshirts</TextLink>, artist overalls and oversized cabans feature
+              <TextLink to="/">sweatshirts</TextLink>, artist overalls and oversized cabans feature
               alongside our signature trench coat in both heritage and seasonal…
               <MoreButton>More</MoreButton>
             </Text>

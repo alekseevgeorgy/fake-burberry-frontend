@@ -97,11 +97,11 @@ const Price = styled.p`
 export default function Card(props) {
   return (
     <Wrapper>
-      <Link to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
+      <Link to={`/${props.to}/`}>
         <Image src={props.src} />
       </Link>
       <WrapperInfo>
-        <LinkInfo to="/men/clothing/coats/Long-Cotton-Gabardine-Car-Coat">
+        <LinkInfo to={`/${props.to}/`}>
           <Style>
             {props.productStyle}
           </Style>
@@ -133,4 +133,5 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   colours: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
+  to: PropTypes.string.isRequired,
 };
