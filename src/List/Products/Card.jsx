@@ -104,7 +104,7 @@ export default function Card(props) {
           value={props.value}
           style="currency"
           currency="RUB"
-          currencyDisplay="code"
+          currencyDisplay="symbol"
           minimumFractionDigits="0"
         />
       </Price>
