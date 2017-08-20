@@ -6,14 +6,14 @@ import Description from './Description';
 
 const ImagePrimary = styled.img`
   display: block;
-  height: 861px;
+  width: 100%;
   flex-shrink: 0;
   margin-top: 4rem;
 `;
 
 const ImageSecondary = styled.img`
   display: block;
-  width: 315px;
+  width: 100%;
   flex-shrink: 0;
 `;
 
@@ -40,32 +40,32 @@ export default () =>
         <Button />
         <Description />
       </div>
-      <MediaQuery minDeviceWidth={992}>
+      <MediaQuery minWidth={992}>
         <div className="col-lg-8">
           <ImagePrimary
-            src={`${process.env.PUBLIC_URL}img/product-photo-5.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-5.png`}
             alt="product-photo-5"
           />
         </div>
       </MediaQuery>
     </div>
-    <MediaQuery minDeviceWidth={992}>
+    <MediaQuery minWidth={992}>
       <Images className="row">
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-2.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-2.png`}
             alt="product-photo-2"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-4.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-4.png`}
             alt="product-photo-4"
           />
         </div>
         <div className="col-lg-4">
           <ImageSecondary
-            src={`${process.env.PUBLIC_URL}img/product-photo-3.png`}
+            src={`${process.env.PUBLIC_URL}/img/product-photo-3.png`}
             alt="product-photo-3"
           />
         </div>

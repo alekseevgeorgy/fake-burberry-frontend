@@ -59,13 +59,13 @@ const ButtonHelp = styled.button`
 
 export default () =>
   (<div>
-    <MediaQuery maxDeviceWidth={991}>
+    <MediaQuery maxWidth={991}>
       <Wrapper>
         <Button primary>SELECT A SIZE</Button>
         <Button secondary>FIND IN STORE</Button>
       </Wrapper>
     </MediaQuery>
-    <MediaQuery minDeviceWidth={992}>
+    <MediaQuery minWidth={992}>
       <div className="row">
         <div className="col-lg-6">
           <Button primary>ADD TO BAG</Button>
@@ -75,7 +75,7 @@ export default () =>
         </div>
       </div>
     </MediaQuery>
-    <MediaQuery maxDeviceWidth={991}>
+    <MediaQuery maxWidth={991}>
       <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
     </MediaQuery>
   </div>);

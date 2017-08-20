@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  padding-left: .5rem;
   margin-top: 1rem;
 
   @media screen and (min-width: 48rem) {
@@ -34,9 +33,11 @@ const Link = styled.a`
 `;
 
 export default () =>
-  (<Wrapper>
-    <Heading>MORE FOR YOU</Heading>
-    <Link>Men’s Black Trench Coats</Link>
-    <Link>Men’s Short Trench Coats</Link>
-    <Link>Men’s Long Trench Coats</Link>
-  </Wrapper>);
+  (<div className="container">
+    <Wrapper>
+      <Heading>MORE FOR YOU</Heading>
+      <Link>Men’s Black Trench Coats</Link>
+      <Link>Men’s Short Trench Coats</Link>
+      <Link>Men’s Long Trench Coats</Link>
+    </Wrapper>
+  </div>);

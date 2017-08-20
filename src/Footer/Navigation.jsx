@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 const Navigation = styled.nav`
   display: none;
 
   @media screen and (min-width: 48rem) {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    display: block;
+    margin-bottom: 2.25rem;
   }
 `;
 
@@ -32,6 +38,23 @@ const Link = styled.a`
   color: #999999;
 `;
 
+const Image = styled.img`
+  display: block;
+  width: 100%;
+`;
+
+const FindStore = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #171717;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: #171717;
+`;
+
 export default () =>
   (<Navigation>
     <div className="row">
@@ -42,7 +65,7 @@ export default () =>
         <Link href="#">Shipping</Link>
         <Link href="#">Returns</Link>
         <Link href="#">Faqs</Link>
-        <Link href="#">Returns</Link>
+        <Link href="#">Live Chat</Link>
         <Link href="#">The Burberry App</Link>
         <Link href="#">Store Locator</Link>
       </div>
@@ -62,5 +85,11 @@ export default () =>
         <Link href="#">Accessibility Statement</Link>
         <Link href="#">Japan Only - SCTL indications</Link>
       </div>
+      <MediaQuery minWidth={992}>
+        <div className="col-md-3">
+          <Image src="https://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg?$BBY_V2_BASIC$&hei=154&wid=232" />
+          <FindStore>Find a store</FindStore>
+        </div>
+      </MediaQuery>
     </div>
   </Navigation>);

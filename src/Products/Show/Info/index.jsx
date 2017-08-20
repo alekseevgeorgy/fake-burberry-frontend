@@ -55,7 +55,7 @@ const Text = Title.extend`
 export default () =>
   (<Background>
     <div className="container">
-      <MediaQuery maxDeviceWidth={991}>
+      <MediaQuery maxWidth={991}>
         <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
       </MediaQuery>
       <div className="row middle-lg">
@@ -63,7 +63,7 @@ export default () =>
           <Images />
         </div>
         <div className="col-xs-12 col-md-5 col-lg-6">
-          <MediaQuery minDeviceWidth={992}>
+          <MediaQuery minWidth={992}>
             <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
           </MediaQuery>
           <Price price={110000} currency="RUB" id={39428531} />
@@ -71,7 +71,7 @@ export default () =>
             <div className="col-lg-6">
               <Colour />
             </div>
-            <MediaQuery minDeviceWidth={992}>
+            <MediaQuery minWidth={992}>
               <div className="col-lg-6">
                 <Size />
               </div>
@@ -81,14 +81,14 @@ export default () =>
             <div className="col-xs-12 col-lg-6">
               <ColourButtons />
             </div>
-            <MediaQuery minDeviceWidth={992}>
+            <MediaQuery minWidth={992}>
               <div className="col-lg-6">
                 <SizeButtons />
               </div>
             </MediaQuery>
           </div>
           <Cta />
-          <MediaQuery minDeviceWidth={992}>
+          <MediaQuery minWidth={992}>
             <Title>Free Next Day Delivery</Title>
             <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
           </MediaQuery>
