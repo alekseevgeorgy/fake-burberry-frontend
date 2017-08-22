@@ -3,12 +3,13 @@ node_js: 6
 script: yarn build
 deploy:
 - provider: script
-  script: chmod +x ./tasks/deploy-dev.sh && ./tasks/deploy-dev.sh
+  script: now alias $(now build --public --token "$NOW_TOKEN") $URL_DEV --token $NOW_TOKEN
   skip_cleanup: true
   on:
     branch: feat/develop
+
 - provider: script
-  script: chmod +x ./tasks/deploy.sh && ./tasks/deploy.sh
+  script: now alias $(now build --public --token "$NOW_TOKEN") $URL_MASTER --token $NOW_TOKEN
   skip_cleanup: true
   on:
     branch: master
