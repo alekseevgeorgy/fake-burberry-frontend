@@ -1,6 +1,5 @@
 language: node_js
 node_js: 6
-after_success: ./tasks/deploy.sh
 deploy:
   provider: script
   script: chmod +x ./deploy.sh && ./deploy.sh
