@@ -87,7 +87,7 @@ export default () =>
     <Hamburger />
     <MediaQuery minWidth={768}>
       <CurrentStore>
-        Shopping in:&nbsp;<Span>United Kingdom biiiiitch (£)</Span>
+        Shopping in:&nbsp;<Span>United Kingdom fuuuuck (£)</Span>
       </CurrentStore>
     </MediaQuery>
     <Link to="/">
