@@ -6,7 +6,7 @@ deploy:
   script: now alias $(now build --public --token "$NOW_TOKEN") $URL_DEV --token $NOW_TOKEN
   skip_cleanup: true
   on:
-    branch: feat/develop
+    branch: develop
 
 - provider: script
   script: now alias $(now build --public --token "$NOW_TOKEN") $URL_MASTER --token $NOW_TOKEN
