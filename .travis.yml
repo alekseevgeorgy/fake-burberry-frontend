@@ -1,8 +1,9 @@
 language: node_js
 node_js: 6
+script: yarn build
 deploy:
   provider: script
-  script: chmod +x ./deploy.sh && ./deploy.sh
+  script: chmod +x ./deploy.sh && ./deploy.sh build
   skip_cleanup: true
   on:
     branch: feat/develop
