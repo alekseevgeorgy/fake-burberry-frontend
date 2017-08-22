@@ -3,7 +3,7 @@ node_js: 6
 script: yarn build
 deploy:
   provider: script
-  script: chmod +x ./deploy.sh && ./deploy.sh build
+  script: chmod +x ./deploy.sh && ./deploy.sh
   skip_cleanup: true
   on:
     branch: feat/develop
