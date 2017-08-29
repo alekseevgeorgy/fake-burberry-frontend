@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Filter from './Filter';
 
 const Background = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   background-color: #f3f3f3;
 
   @media screen and (min-width: 48rem) {
-    margin-bottom: 4rem;
+    margin-bottom: 0;
   }
 `;
 
@@ -66,22 +67,46 @@ const MoreButton = styled.button`
   background-color: inherit;
 `;
 
-export default () =>
-  (<Background>
-    <div className="container">
-      <Wrapper>
-        <Heading>Men’s Clothing</Heading>
-        <div className="row">
-          <div className="col-xs-12 col-md-9 col-lg-7">
-            <Text>
-              Explore our menswear collection for the season. Sculptural knitwear,{' '}
-              <TextLink to="/">sweatshirts</TextLink>, artist overalls and oversized cabans feature
-              alongside our signature trench coat in both heritage and seasonal…
-              <MoreButton>More</MoreButton>
-            </Text>
-          </div>
+class ParentFilter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: false };
+    this.stateUpdate = this.stateUpdate.bind(this);
+  }
+
+  stateUpdate(data) {
+    this.props.stateUpdate(this.state.isActive);
+    this.setState({
+      isActive: !data,
+    });
+  }
+
+  render() {
+    return (
+      <Background>
+        <div className="container">
+          <Wrapper>
+            <Heading>Men’s Clothing</Heading>
+            <div className="row">
+              <div className="col-xs-12 col-md-9 col-lg-7">
+                <Text>
+                  Explore our menswear collection for the season. Sculptural knitwear,{' '}
+                  <TextLink to="/">sweatshirts</TextLink>, artist overalls and oversized cabans
+                  feature alongside our signature trench coat in both heritage and seasonal…
+                  <MoreButton>More</MoreButton>
+                </Text>
+              </div>
+            </div>
+          </Wrapper>
+          <Filter stateUpdate={this.stateUpdate} />
         </div>
-      </Wrapper>
-      <Filter />
-    </div>
-  </Background>);
+      </Background>
+    );
+  }
+}
+
+ParentFilter.propTypes = {
+  stateUpdate: PropTypes.func.isRequired,
+};
+
+export default ParentFilter;

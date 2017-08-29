@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const Wrapper = styled.div`
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  @media screen and (min-width: 48rem) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
 `;
 
 const Heading = styled.h2`
@@ -24,15 +29,14 @@ const Heading = styled.h2`
 `;
 
 const Line = styled.hr`
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
   height: 1px;
   border: none;
   background-color: #c6c6c6;
 
   @media screen and (min-width: 48rem) {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
   }
 `;
 

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import arrow from '../../../img/arrow.svg';
+import PropTypes from 'prop-types';
+import FilterButton from './FilterButton';
 
-const Filter = styled.div`
+const FilterSt = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   display: flex;
@@ -12,53 +13,75 @@ const Filter = styled.div`
 
   @media screen and (min-width: 48rem) {
     justify-content: space-between;
+    overflow-x: visible;
   }
 `;
 
 const Wrapper = styled.div`display: flex;`;
 
-const Button = styled.button`
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-right: 1rem;
-  white-space: nowrap;
-  border: none;
+const DropdownText = styled.p`
   font-family: Raleway, sans-serif;
+  white-space: nowrap;
   font-size: 0.75rem;
   line-height: 1rem;
-  background-color: inherit;
   color: #171717;
-
-  &:after {
-    content: "";
-    margin-left: .5rem;
-    background: url(${arrow}) 0 0 no-repeat;
-    background-size: contain;
-    width: 0.75rem;
-    height: 0.375rem;
-  }
-
-  @media screen and (min-width: 48rem) {
-    margin-right: 3rem;
-  }
 `;
 
-const ButtonRight = Button.extend`
-  @media screen and (min-width: 48rem) {
-    padding-left: 1rem;
-    margin-right: 0;
+class Filter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: false };
+    this.handleClick = this.handleClick.bind(this);
   }
-`;
 
-export default () =>
-  (<Filter>
-    <Wrapper>
-      <Button>Category</Button>
-      <Button>Colour</Button>
-      <Button>Size</Button>
-    </Wrapper>
-    <Wrapper>
-      <ButtonRight>Sort by price</ButtonRight>
-    </Wrapper>
-  </Filter>);
+  handleClick(data) {
+    const active = data === true;
+    this.props.stateUpdate(this.state.isActive);
+    this.setState({
+      isActive: !active,
+    });
+  }
+
+  render() {
+    return (
+      <FilterSt>
+        <Wrapper>
+          <FilterButton
+            childClick={this.handleClick}
+            active={this.state.isActive}
+            name="Category"
+            align="left"
+          >
+            <DropdownText>Content</DropdownText>
+          </FilterButton>
+          <FilterButton childClick={this.handleClick} active={this.state.isActive} name="Colour">
+            <DropdownText>
+              Content for colour <button>you can click me and i wont close dropdown, yey!</button>
+            </DropdownText>
+          </FilterButton>
+          <FilterButton childClick={this.handleClick} active={this.state.isActive} name="Size">
+            <DropdownText>Content for size</DropdownText>
+          </FilterButton>
+        </Wrapper>
+        <Wrapper>
+          <div>
+            <FilterButton
+              childClick={this.handleClick}
+              active={this.state.isActive}
+              name="Sort by price"
+              align="right"
+            >
+              <DropdownText>Content for sort by price</DropdownText>
+            </FilterButton>
+          </div>
+        </Wrapper>
+      </FilterSt>
+    );
+  }
+}
+
+Filter.propTypes = {
+  stateUpdate: PropTypes.func.isRequired,
+};
+
+export default Filter;
