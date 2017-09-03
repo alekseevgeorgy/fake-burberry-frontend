@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import ShoppingButton from './ShoppingButton';
 import hamburger from '../img/hamburger.svg';
-import arrow from '../img/arrow.svg';
 import logo from '../img/logo.svg';
 
-const Header = styled.header`
+const HeaderSt = styled.header`
   position: relative;
   display: flex;
   justify-content: center;
@@ -42,36 +43,6 @@ const Hamburger = styled.button`
   }
 `;
 
-const CurrentStore = styled.button`
-  display: flex;
-  align-items: center;
-  position: absolute;
-  padding: 0;
-  border: none;
-  left: .5rem;
-  font-family: Raleway;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1rem;
-  text-align: left;
-  color: #999999;
-  background-color: inherit;
-`;
-
-const Span = styled.span`
-  display: flex;
-  align-items: center;
-
-  &:after {
-    content: "";
-    margin-left: .5rem;
-    background: url(${arrow}) 0 0 no-repeat;
-    background-size: contain;
-    width: 0.75rem;
-    height: 0.375rem;
-  }
-`;
-
 const Logo = styled.img`
   margin: auto;
   display: block;
@@ -82,15 +53,64 @@ const Logo = styled.img`
   }
 `;
 
-export default () =>
-  (<Header className="container">
-    <Hamburger />
-    <MediaQuery minWidth={768}>
-      <CurrentStore>
-        Shopping in:&nbsp;<Span>United Kingdom (£)</Span>
-      </CurrentStore>
-    </MediaQuery>
-    <Link to="/">
-      <Logo src={logo} />
-    </Link>
-  </Header>);
+const countries = ['United Kingdom (£)', 'United States ($)', 'Russian Federation (₽)'];
+
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpened: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleOutsideClick, true);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick, true);
+  }
+
+  handleOutsideClick(e) {
+    if (this.node && !this.node.contains(e.target)) {
+      this.handleClick(false);
+    }
+  }
+
+  handleClick(on) {
+    if (on !== this.state.isOpened) {
+      this.setState(prevState => ({
+        isOpened: !prevState.isOpened,
+      }));
+      this.props.passProps();
+    }
+  }
+
+  render() {
+    return (
+      <HeaderSt className="container">
+        <div
+          ref={(node) => {
+            this.node = node;
+          }}
+        >
+          <Hamburger onClick={this.handleClick} />
+        </div>
+        <MediaQuery minWidth={768}>
+          <ShoppingButton countries={countries} />
+        </MediaQuery>
+        <Link to="/">
+          <Logo src={logo} />
+        </Link>
+      </HeaderSt>
+    );
+  }
+}
+
+Header.propTypes = {
+  passProps: PropTypes.func.isRequired,
+};
+
+export default Header;

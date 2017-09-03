@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FormattedNumber } from 'react-intl';
 import PropTypes from 'prop-types';
-import fav from '../../../img/fav.svg';
+import FavButton from './FavButton';
 
 const Wrapper = styled.div`
   display: block;
@@ -41,22 +41,6 @@ const Style = styled.p`
   font-size: 0.75rem;
   line-height: 1rem;
   color: #171717;
-`;
-
-const Button = styled.button`
-  margin-top: 1rem;
-  margin-left: .5rem;
-  flex-shrink: 0;
-  width: 0.875rem;
-  height: 0.875rem;
-  border: none;
-  background: url(${fav}) 0 0 no-repeat;
-  background-size: contain;
-  background-color: inherit;
-
-  @media screen and (min-width: 48rem) {
-    margin-left: 1rem;
-  }
 `;
 
 const Name = styled.h3`
@@ -133,7 +117,7 @@ export default function Card(props) {
             />
           </Price>
         </LinkInfo>
-        <Button />
+        <FavButton />
       </WrapperInfo>
     </Wrapper>
   );

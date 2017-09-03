@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-const Size = styled.p`
+const SizeSt = styled.p`
   margin: 0;
   font-family: Raleway, sans-serif;
   font-size: 0.75rem;
@@ -26,10 +27,17 @@ const ButtonHelp = styled.button`
   color: #171717;
 `;
 
-export default () =>
-  (<Wrapper>
-    <Size>
-      Size: <b>XL</b>
-    </Size>
-    <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
-  </Wrapper>);
+export default function Size(props) {
+  return (
+    <Wrapper>
+      <SizeSt>
+        Size: <b>{props.size}</b>
+      </SizeSt>
+      <ButtonHelp>NEED SIZE HELP?</ButtonHelp>
+    </Wrapper>
+  );
+}
+
+Size.propTypes = {
+  size: PropTypes.string.isRequired,
+};

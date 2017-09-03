@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import Images from './Images';
@@ -52,47 +52,68 @@ const Text = Title.extend`
   font-weight: 400;
 `;
 
-export default () =>
-  (<Background>
-    <div className="container">
-      <MediaQuery maxWidth={991}>
-        <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
-      </MediaQuery>
-      <div className="row middle-lg">
-        <div className="col-xs-12 col-md-7 col-lg-6">
-          <Images />
-        </div>
-        <div className="col-xs-12 col-md-5 col-lg-6">
-          <MediaQuery minWidth={992}>
+const sizes = ['S', 'M', 'L', 'XL'];
+
+class Info extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { size: sizes[0] };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(data) {
+    this.setState({
+      size: data,
+    });
+  }
+
+  render() {
+    return (
+      <Background>
+        <div className="container">
+          <MediaQuery maxWidth={991}>
             <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
           </MediaQuery>
-          <Price price={110000} currency="RUB" id={39428531} />
-          <div className="row">
-            <div className="col-lg-6">
-              <Colour />
+          <div className="row middle-lg">
+            <div className="col-xs-12 col-md-7 col-lg-6">
+              <Images />
             </div>
-            <MediaQuery minWidth={992}>
-              <div className="col-lg-6">
-                <Size />
+            <div className="col-xs-12 col-md-5 col-lg-6">
+              <MediaQuery minWidth={992}>
+                <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
+              </MediaQuery>
+              <Price price={110000} currency="RUB" id={39428531} />
+              <div className="row">
+                <div className="col-lg-6">
+                  <Colour />
+                </div>
+                <MediaQuery minWidth={992}>
+                  <div className="col-lg-6">
+                    <Size size={this.state.size} />
+                  </div>
+                </MediaQuery>
               </div>
-            </MediaQuery>
-          </div>
-          <div className="row">
-            <div className="col-xs-12 col-lg-6">
-              <ColourButtons />
+              <div className="row">
+                <div className="col-xs-12 col-lg-6">
+                  <ColourButtons />
+                </div>
+                <MediaQuery minWidth={992}>
+                  <div className="col-lg-6">
+                    <SizeButtons onClick={this.handleClick} sizes={sizes} />
+                  </div>
+                </MediaQuery>
+              </div>
+              <Cta />
+              <MediaQuery minWidth={992}>
+                <Title>Free Next Day Delivery</Title>
+                <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+              </MediaQuery>
             </div>
-            <MediaQuery minWidth={992}>
-              <div className="col-lg-6">
-                <SizeButtons />
-              </div>
-            </MediaQuery>
           </div>
-          <Cta />
-          <MediaQuery minWidth={992}>
-            <Title>Free Next Day Delivery</Title>
-            <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
-          </MediaQuery>
         </div>
-      </div>
-    </div>
-  </Background>);
+      </Background>
+    );
+  }
+}
+
+export default Info;
