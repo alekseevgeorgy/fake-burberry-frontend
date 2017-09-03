@@ -1,11 +1,11 @@
+/* eslint-disable max-len */
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import FilterButton from './FilterButton';
+import Button from './Button';
 
 const FilterSt = styled.div`
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -34,46 +34,43 @@ class Filter extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(data) {
-    const active = data === true;
-    this.props.stateUpdate(this.state.isActive);
-    this.setState({
-      isActive: !active,
-    });
+  handleClick() {
+    // 6 функция, которая вызывается пропом из 5 шага
+    this.setState(prevState => ({
+      isActive: !prevState.isActive, // 7 обновляется стейт РОДИТЕЛЯ, чтобы менять цвет в нашем случае
+    }));
+    this.props.updateParentState(); // 8 объявляем проп, чтобы передать его дальше вверх
   }
 
   render() {
     return (
       <FilterSt>
         <Wrapper>
-          <FilterButton
-            childClick={this.handleClick}
-            active={this.state.isActive}
+          <Button
+            handleChange={this.handleClick} // 5 задаем (инициализируем) значение для пропа
+            isActive={this.state.isActive}
             name="Category"
-            align="left"
           >
             <DropdownText>Content</DropdownText>
-          </FilterButton>
-          <FilterButton childClick={this.handleClick} active={this.state.isActive} name="Colour">
+          </Button>
+          <Button handleChange={this.handleClick} isActive={this.state.isActive} name="Colour">
             <DropdownText>
               Content for colour <button>you can click me and i wont close dropdown, yey!</button>
             </DropdownText>
-          </FilterButton>
-          <FilterButton childClick={this.handleClick} active={this.state.isActive} name="Size">
+          </Button>
+          <Button handleChange={this.handleClick} isActive={this.state.isActive} name="Size">
             <DropdownText>Content for size</DropdownText>
-          </FilterButton>
+          </Button>
         </Wrapper>
         <Wrapper>
-          <div>
-            <FilterButton
-              childClick={this.handleClick}
-              active={this.state.isActive}
-              name="Sort by price"
-              align="right"
-            >
-              <DropdownText>Content for sort by price</DropdownText>
-            </FilterButton>
-          </div>
+          <Button
+            handleChange={this.handleClick}
+            active={this.state.isActive}
+            name="Sort by price"
+            align="right"
+          >
+            <DropdownText>Content for sort by price</DropdownText>
+          </Button>
         </Wrapper>
       </FilterSt>
     );
@@ -81,7 +78,7 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-  stateUpdate: PropTypes.func.isRequired,
+  updateParentState: PropTypes.func.isRequired,
 };
 
 export default Filter;

@@ -12,6 +12,7 @@ const Button = styled.button`
   border: none;
   background-color: inherit;
   outline: none;
+  cursor: pointer;
 
   @media screen and (min-width: 48rem) {
     margin-left: 1rem;
@@ -21,9 +22,7 @@ const Button = styled.button`
 class FavButton extends Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: true };
-
-    // This binding is necessary to make `this` work in the callback
+    this.state = { isToggleOn: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -36,16 +35,13 @@ class FavButton extends Component {
   render() {
     return (
       <div>
-        <Button
-          onClick={this.handleClick}
-          style={{ fill: this.state.isToggleOn ? 'none' : 'black' }}
-        >
+        <Button onClick={this.handleClick}>
           <svg width="16px" height="15px">
             <g
               id="Symbols"
               stroke="black"
               strokeWidth="1"
-              fill={this.props.fill}
+              fill={this.state.isToggleOn ? 'black' : 'none'}
               fillRule="evenodd"
             >
               <g id="Icon-/-Like" transform="translate(1.000000, 1.000000)">

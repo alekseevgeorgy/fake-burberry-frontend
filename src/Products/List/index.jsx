@@ -15,17 +15,19 @@ const ContentDarken = styled.div`
   opacity: .3;
 `;
 
+const Wrapper = styled.div`position: relative;`;
+
 class List extends Component {
   constructor(props) {
     super(props);
     this.state = { isActive: false };
-    this.stateUpdate = this.stateUpdate.bind(this);
+    this.updateParentState = this.updateParentState.bind(this);
   }
 
-  stateUpdate(data) {
-    this.setState({
-      isActive: !data,
-    });
+  updateParentState() {
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
+    }));
   }
 
   render() {
@@ -34,12 +36,12 @@ class List extends Component {
         <Helmet>
           <title>Men - Burberry</title>
         </Helmet>
-        <Filter stateUpdate={this.stateUpdate} />
-        <div style={{ position: 'relative' }}>
+        <Filter updateParentState={this.updateParentState} />
+        <Wrapper>
           <Products />
           <ShowMore />
           <ContentDarken currentState={this.state.isActive} />
-        </div>
+        </Wrapper>
       </main>
     );
   }

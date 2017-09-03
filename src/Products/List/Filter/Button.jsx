@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -5,10 +7,11 @@ import arrow from '../../../img/arrow.svg';
 
 const Wrapper = styled.div`position: relative;`;
 
-const Button = styled.button`
+const ButtonSt = styled.button`
   display: flex;
   align-items: center;
-  padding: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   margin-right: 1rem;
   white-space: nowrap;
   border: none;
@@ -18,8 +21,7 @@ const Button = styled.button`
   cursor: pointer;
   background-color: inherit;
   color: #171717;
-  opacity: ${props => (props.currentState && props.active ? '.5' : '1')};
-  opacity: ${props => (!props.currentState && props.active ? '.5' : '1')};
+  opacity: ${props => (!props.isOpened && props.isActive ? '.5' : '1')};
 
   &:after {
     content: "";
@@ -28,7 +30,7 @@ const Button = styled.button`
     background-size: contain;
     width: 0.75rem;
     height: 0.375rem;
-    transform: ${props => (props.currentState ? 'rotate(180deg)' : 'none')};
+    transform: ${props => (props.isOpened ? 'rotate(180deg)' : 'none')};
   }
 
   @media screen and (min-width: 48rem) {
@@ -41,9 +43,8 @@ const Dropdown = styled.div`
   z-index: 9999;
   overflow: hidden;
   position: absolute;
-  margin-left: ${props => (props.align === 'left' ? 0 : '-1.5rem')};
-  right: ${props => (props.align === 'right' ? 0 : 'auto')};
-  margin-top: 1.5rem;
+  margin-left: -1.5rem;
+  right: ${props => (props.align === 'right' ? '-24px' : 'auto')};
   padding: 1rem 1.5rem 1.5rem;
   background-color: #f3f3f3;
 
@@ -55,7 +56,7 @@ const Dropdown = styled.div`
   `};
 `;
 
-class FilterButton extends Component {
+class Button extends Component {
   constructor(props) {
     super(props);
     this.state = { isOpened: false };
@@ -77,12 +78,15 @@ class FilterButton extends Component {
     }
   }
 
-  handleClick(on = true) {
-    if (on === false && on === this.state.isOpened) return;
-    this.props.childClick(this.state.isOpened);
-    this.setState(prevState => ({
-      isOpened: !prevState.isOpened,
-    }));
+  handleClick(on) {
+    // 2 вызывается функция
+    if (on !== this.state.isOpened) {
+      // нужно для аутсайд клика
+      this.setState(prevState => ({
+        isOpened: !prevState.isOpened, // 3 обновляется стейт РЕБЕНКА, чтобы открылся дропдаун
+      }));
+      this.props.handleChange(); // 4 мы задаем (определяем) новый проп в ребенке; 5 шаг у нас в родителе
+    }
   }
 
   render() {
@@ -93,14 +97,14 @@ class FilterButton extends Component {
             this.node = node;
           }}
         >
-          <Button
-            onClick={this.handleClick}
-            currentState={this.state.isOpened} // проецирует текущий стейт
+          <ButtonSt
+            onClick={this.handleClick} // 1 отсюда все начинается
+            isOpened={this.state.isOpened} // проецирует текущий стейт
             align={this.props.align}
-            active={this.props.active} // то, что приходит с родителя
+            isActive={this.props.isActive} // то, что приходит с родителя
           >
             {this.props.name}
-          </Button>
+          </ButtonSt>
           {this.state.isOpened &&
             <Dropdown align={this.props.align}>
               {this.props.children}
@@ -111,12 +115,12 @@ class FilterButton extends Component {
   }
 }
 
-FilterButton.propTypes = {
+Button.propTypes = {
   children: PropTypes.element.isRequired,
   name: PropTypes.string.isRequired,
   align: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-  childClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
-export default FilterButton;
+export default Button;

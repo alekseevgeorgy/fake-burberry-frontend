@@ -67,18 +67,15 @@ const MoreButton = styled.button`
   background-color: inherit;
 `;
 
-class ParentFilter extends Component {
+class PageHeader extends Component {
   constructor(props) {
     super(props);
     this.state = { isActive: false };
-    this.stateUpdate = this.stateUpdate.bind(this);
+    this.updateParentState = this.updateParentState.bind(this);
   }
 
-  stateUpdate(data) {
-    this.props.stateUpdate(this.state.isActive);
-    this.setState({
-      isActive: !data,
-    });
+  updateParentState() {
+    this.props.updateParentState();
   }
 
   render() {
@@ -98,15 +95,15 @@ class ParentFilter extends Component {
               </div>
             </div>
           </Wrapper>
-          <Filter stateUpdate={this.stateUpdate} />
+          <Filter updateParentState={this.updateParentState} />
         </div>
       </Background>
     );
   }
 }
 
-ParentFilter.propTypes = {
-  stateUpdate: PropTypes.func.isRequired,
+PageHeader.propTypes = {
+  updateParentState: PropTypes.func.isRequired,
 };
 
-export default ParentFilter;
+export default PageHeader;
